@@ -4,9 +4,14 @@ from fastapi.staticfiles import StaticFiles
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
 from app.api import api
+from app.database import init_db
 from app.oauth import callbacks
 
 app = FastAPI(title="Hackanomous API")
+
+@app.on_event("startup")
+async def startup() -> None:
+    await init_db()
 
 @app.exception_handler(Exception)
 async def exception_handler(request: Request, exception: Exception):
