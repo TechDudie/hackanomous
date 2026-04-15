@@ -4,6 +4,7 @@ from fastapi.staticfiles import StaticFiles
 from starlette.exceptions import HTTPException as StarletteHTTPException
 
 from app.api import api
+from app.oauth import callbacks
 
 app = FastAPI(title="Hackanomous API")
 
@@ -28,6 +29,7 @@ async def http_exception_handler(request: Request, exception: Exception):
     )
 
 app.include_router(api, prefix="/api")
+app.include_router(callbacks, prefix="/oauth")
 
 app.mount("/assets", StaticFiles(directory="dist/assets"))
 
