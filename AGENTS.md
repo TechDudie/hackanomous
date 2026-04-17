@@ -3,6 +3,7 @@
 This is a Svelte+Vite+FastAPI codebase. It's the web app for a Hack Club YSWS program. When asked to do frontend design that requires your creative input, always use the `frontend-design` skill. When writing svelte, use your `svelte-mcp` server to the fullest extent possible. When completing backend API endpoints, always include a human-readable "message" field.
 
 When writing code:
+
 - Keep code as simple as possible! Simple over complex.
 - Don't do more than what the user asks you to! You should always do the reasonable minimum of the user's prompt.
 - Always when possible, use double quotes instead of single quotes!
