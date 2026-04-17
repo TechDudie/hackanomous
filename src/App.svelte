@@ -1,89 +1,85 @@
 <script>
-  import svelteLogo from './assets/svelte.svg'
-  import viteLogo from './assets/vite.svg'
-  import heroImg from './assets/hero.png'
-  import Counter from './lib/Counter.svelte'
+    import { Mouse } from "lucide-svelte";
+    import hackclub from "./assets/hackclub.svg";
+    import mascotDark from "./assets/mascot_dark.svg";
 </script>
 
-<section id="center">
-  <div class="hero">
-    <img src={heroImg} class="base" width="170" height="179" alt="" />
-    <img src={svelteLogo} class="framework" alt="Svelte logo" />
-    <img src={viteLogo} class="vite" alt="Vite logo" />
-  </div>
-  <div>
-    <h1>Get started</h1>
-    <p>Edit <code>src/App.svelte</code> and save to test <code>HMR</code></p>
-  </div>
-  <Counter />
+<!-- hackclub icon -->
+<section class="absolute top-8 left-1/2 -translate-x-1/2 z-50">
+    <a href="https://hackclub.com" target="_blank" rel="noopener noreferrer" class="block">
+        <img src={hackclub} class="cursor-pointer transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-105 hover:drop-shadow-xl active:scale-95 active:-translate-y-0 active:duration-150" width="50" alt="Hack Club logo" />
+    </a>
 </section>
 
-<div class="ticks"></div>
-
-<section id="next-steps">
-  <div id="docs">
-    <svg class="icon" role="presentation" aria-hidden="true">
-      <use href="/icons.svg#documentation-icon"></use>
-    </svg>
-    <h2>Documentation</h2>
-    <p>Your questions, answered</p>
-    <ul>
-      <li>
-        <a href="https://vite.dev/" target="_blank" rel="noreferrer">
-          <img class="logo" src={viteLogo} alt="" />
-          Explore Vite
-        </a>
-      </li>
-      <li>
-        <a href="https://svelte.dev/" target="_blank" rel="noreferrer">
-          <img class="button-icon" src={svelteLogo} alt="" />
-          Learn more
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div id="social">
-    <svg class="icon" role="presentation" aria-hidden="true">
-      <use href="/icons.svg#social-icon"></use>
-    </svg>
-    <h2>Connect with us</h2>
-    <p>Join the Vite community</p>
-    <ul>
-      <li>
-        <a href="https://github.com/vitejs/vite" target="_blank" rel="noreferrer">
-          <svg class="button-icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#github-icon"></use>
-          </svg>
-          GitHub
-        </a>
-      </li>
-      <li>
-        <a href="https://chat.vite.dev/" target="_blank" rel="noreferrer">
-          <svg class="button-icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#discord-icon"></use>
-          </svg>
-          Discord
-        </a>
-      </li>
-      <li>
-        <a href="https://x.com/vite_js" target="_blank" rel="noreferrer">
-          <svg class="button-icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#x-icon"></use>
-          </svg>
-          X.com
-        </a>
-      </li>
-      <li>
-        <a href="https://bsky.app/profile/vite.dev" target="_blank" rel="noreferrer">
-          <svg class="button-icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#bluesky-icon"></use>
-          </svg>
-          Bluesky
-        </a>
-      </li>
-    </ul>
-  </div>
+<!-- landing -->
+<section class="min-h-[100dvh] flex justify-center items-center py-12 px-4 bg-[linear-gradient(150deg,#080E12,#0B1618)]">
+    <div class="relative">
+        <img src={mascotDark} class="base absolute top-3 -right-6" width="160" alt="anomaly, our mascot!" />
+        <div class="w-fit border-2 border-dashed border-(--code-bg) rounded-2xl px-16 py-2 relative z-10 bg-[linear-gradient(175deg,var(--bg)_0%,#0B1618_33%,#080E12_100%)]">
+            <h3 class="font-content font-extralight text-sm text-(--text-h) tracking-widest">COMING SOON</h3>
+        </div>
+        <h1 class="font-heading font-regular text-7xl text-(--accent) mt-6">
+            BUILD <span class="font-semibold">AI</span>.
+        </h1>
+        <h1 class="font-heading font-regular text-7xl text-(--text) mt-4">
+            GET <span class="font-semibold">PRIZES</span>!
+        </h1>
+        <div class="mt-8 flex">
+            <input id="rsvp-input" class="flex-1 px-4 font-content font-light border-2 border-solid border-(--accent) text-(--accent-border) rounded-xl py-3 mr-4 focus:outline-none focus:border-(--accent-hover) focus:shadow-[0_0_67px_color-mix(in_srgb,var(--accent-hover)_6.7%,transparent)]" style="transition: box-shadow 0.35s ease-out, border-color 0.15s ease-out, background-color 0.15s ease-out;" type="text" placeholder="you@example.com" />
+            <button onclick={() => window.open("https://hackanomous-rsvp.fillout.com/t/4oPTMjqFuaus", "_blank")} class="font-content font-semibold border-2 border-solid border-(--accent) bg-(--accent) text-(--bg) rounded-xl px-10 py-3 cursor-pointer hover:bg-(--accent-hover) hover:border-(--accent-hover) hover:shadow-[0_0_67px_color-mix(in_srgb,var(--accent-hover)_6.7%,transparent)]" style="transition: box-shadow 0.35s ease-out, border-color 0.15s ease-out, background-color 0.15s ease-out;">RSVP!</button>
+        </div>
+    </div>
 </section>
 
-<div class="ticks"></div>
-<section id="spacer"></section>
+<!-- scroll down -->
+<section class="absolute bottom-8 left-1/2 -translate-x-1/2 text-(--accent-border)">
+    <div class="flex flex-row items-center gap-3 floater">
+        <Mouse size={24} />
+        <span class="font-content font-light text-base tracking-widest">SCROLL DOWN</span>
+    </div>
+</section>
+
+<!-- NEXT VIEWPORT -->
+
+<section class="min-h-[100dvh] bg-[#000000] flex flex-col justify-center items-center py-20 px-4 sm:px-8 relative overflow-hidden">
+    <!-- Subtle top border glow -->
+    <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-(--accent) to-transparent opacity-30"></div>
+
+    <div class="max-w-5xl w-full flex flex-col lg:flex-row gap-16 items-center z-10">
+        <div class="flex-1 space-y-8">
+            <h2 class="font-heading font-regular text-5xl md:text-7xl text-(--text)">
+                INSERT CALL TO <span class="text-(--accent) font-semibold">ACTION</span>.
+            </h2>
+            <p class="font-content font-light text-xl md:text-2xl leading-relaxed text-(--text-h)">technodot here! TRANSPARENCY: this second half was vibecoded. i'm not really a fan of the black background here; we lowk need to figma prototype first.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+                <div class="border-2 border-dashed border-(--code-bg) p-8 rounded-3xl bg-(--bg) hover:border-(--accent) transition-colors duration-300 group cursor-default">
+                    <h4 class="font-heading text-4xl text-(--accent) mb-3 group-hover:scale-105 transition-transform origin-left drop-shadow-md">SIX</h4>
+                    <p class="font-content text-base font-light text-(--text-h)">67676767676767676767676767676767 67676767676767676767676767676767</p>
+                </div>
+                <div class="border-2 border-dashed border-(--code-bg) p-8 rounded-3xl bg-(--bg) hover:border-(--accent) transition-colors duration-300 group cursor-default">
+                    <h4 class="font-heading text-4xl text-(--accent) mb-3 group-hover:scale-105 transition-transform origin-left drop-shadow-md">SEVEN</h4>
+                    <p class="font-content text-base font-light text-(--text-h)">67676767676767676767676767676767 67676767676767676767676767676767</p>
+                </div>
+            </div>
+
+            <div class="pt-8">
+                <button onclick={() => window.scrollTo({ top: 0, behavior: "smooth" })} class="font-content font-semibold border-2 border-solid border-(--accent) text-(--accent) hover:bg-(--accent) hover:text-(--bg) rounded-xl px-12 py-4 cursor-pointer focus:outline-none hover:-translate-y-1 hover:shadow-[0_0_30px_color-mix(in_srgb,var(--accent)_30%,transparent)] transition-all duration-300 tracking-wide text-lg"> REGISTER NOW </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .floater {
+        animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(8px);
+        }
+    }
+</style>
