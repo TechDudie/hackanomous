@@ -17,6 +17,7 @@
 :root {
     --text: #ffffff;
     --text-h: #b0e4cc;
+    --text-l: #c4eeda;
     --bg: #0b1618;
     --border: #34745f;
     --code-bg: #255a4d;
@@ -27,8 +28,8 @@
     --social-bg: rgba(11, 22, 24, 0.5);
     --shadow: rgba(0, 0, 0, 0.3) 0 10px 15px -3px, rgba(0, 0, 0, 0.2) 0 4px 6px -2px;
 
-    --sans: "Lexend", "Segoe UI", Roboto, system-ui, sans-serif;
     --heading: "Unbounded", "Segoe UI", Roboto, system-ui, sans-serif;
+    --sans: "Lexend", "Segoe UI", Roboto, system-ui, sans-serif;
     --mono: "IBM Plex Mono", Consolas, ui-monospace, monospace;
 
     font: 18px/145% var(--sans);
@@ -45,3 +46,38 @@
         font-size: 16px;
     }
 }
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: color-mix(in srgb, var(--accent-border) 72%, transparent) transparent;
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: color-mix(in srgb, var(--accent) 38%, transparent);
+    border: 2px solid transparent;
+    border-radius: 999px;
+    background-clip: padding-box;
+    transition: background-color 180ms ease-out;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: color-mix(in srgb, var(--accent-hover) 52%, transparent);
+}
+
+*::-webkit-scrollbar-thumb:active {
+    background: color-mix(in srgb, var(--accent-hover) 70%, transparent);
+}
+
+*::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
