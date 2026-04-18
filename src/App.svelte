@@ -1,6 +1,7 @@
 <script>
     import { Mouse } from "lucide-svelte";
     import hackclub from "./assets/hackclub.svg";
+    import orpheus from "./assets/orpheus.svg";
     import mascotDark from "./assets/mascot_dark.svg";
 
     import { gsap } from "gsap";
@@ -20,13 +21,26 @@
 <div id="smooth-wrapper">
     <div id="smooth-content">
         <!-- hackclub icon -->
-        <section class="absolute top-8 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2">
-            <h6 class="text-(--accent-border)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a hack</h6>
+        <section class="absolute top-[1.5rem] left-1/2 -translate-x-1/2 z-50 flex items-center gap-2">
+            <h6 class="text-(--accent-border) ml-[25.3px]">a hack</h6>
             <a href="https://hackclub.com" target="_blank" rel="noopener noreferrer" class="block">
-                <img src={hackclub} class="cursor-pointer transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-105 hover:drop-shadow-xl active:scale-95 active:-translate-y-0 active:duration-150" width="50" alt="Hack Club logo" />
+                <img src={hackclub} class="cursor-pointer transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-105 hover:drop-shadow-xl active:scale-95 active:-translate-y-0 active:duration-150" width="40" alt="Hack Club logo" />
             </a>
             <h6 class="text-(--accent-border)">club ysws</h6>
         </section>
+
+        <!-- orpheus flag -->
+        <section class="absolute top-0 left-[24px]">
+            <a href="https://hackclub.com" target="_blank" rel="noopener noreferrer" class="block">
+                <img src={orpheus} class="cursor-pointer" width="180" alt="Orpheus flag" />
+            </a>
+        </section>
+
+        <!-- hackanomous presents -->
+        <!-- not sure about this part, someone who has actual graphic design experience needs to figma it -->
+        <!-- <section class="absolute top-[50dvh] left-1/2 translate-x-[-23rem] translate-y-[-12rem] -rotate-[15deg] z-1 underline underline-offset-2 decoration-(--accent-border)">
+            <h6 class="font-mono text-(--accent-border) tracking-wider">hackanomous presents</h6>
+        </section> -->
         
         <!-- landing -->
         <section class="min-h-[100dvh] flex justify-center items-center py-12 px-4 bg-[linear-gradient(150deg,#080E12,#0B1618)]">
@@ -98,7 +112,7 @@
             transform: translateY(0);
         }
         50% {
-            transform: translateY(8px);
+            transform: translateY(12px);
         }
     }
 </style>
