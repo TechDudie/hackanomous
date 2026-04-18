@@ -81,15 +81,15 @@
                     <h2 class="font-mono font-medium text-5xl md:text-7xl text-(--text)">
                         DESLOP THE <br><span class="font-mono font-bold inline-block bg-clip-text text-transparent" style="background-image: linear-gradient(90deg, var(--accent) 0%, color-mix(in srgb, var(--accent) 90%, transparent) 100%);">WORLD</span>.
                     </h2>
-                    <p class="font-mono font-normal text-xl md:text-2xl leading-relaxed text-(--text-h)">the AI bubble just might be about to pop. <span class="font-bold text-(--text-l)">YOUR MISSION:</span> build projects incorporating AI that solve <u><span class="font-bold text-(--text-l)">real-world</span></u> problems.</p>
+                    <p class="font-mono font-normal text-lg md:text-xl leading-relaxed text-(--text-h)">the AI bubble just might be about to pop.<br><span class="font-bold text-(--text-l)">YOUR MISSION:</span> build projects incorporating AI that solve <u><span class="font-bold text-(--text-l)">real-world</span></u> problems.</p>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
                         <div class="border-2 border-dashed border-(--code-bg) p-8 rounded-3xl bg-(--bg) hover:border-(--accent) transition-colors duration-300 group cursor-default">
-                            <h4 class="font-heading text-4xl text-(--accent) mb-3 group-hover:scale-105 transition-transform origin-left drop-shadow-md">SIX</h4>
-                            <p class="font-content text-base font-light text-(--text-h)">67676767676767676767676767676767 67676767676767676767676767676767</p>
+                            <h4 class="font-heading text-4xl text-(--accent) mb-3 group-hover:scale-105 transition-transform origin-left drop-shadow-md">software</h4>
+                            <p class="font-content text-base font-light text-(--text-h)">Build software that implements AI or Machine Learning to earn Bolts! Use them to buy including Raspberry PIs, AI Credits, RAM & GPU Grants, and more!</p>
                         </div>
                         <div class="border-2 border-dashed border-(--code-bg) p-8 rounded-3xl bg-(--bg) hover:border-(--accent) transition-colors duration-300 group cursor-default">
-                            <h4 class="font-heading text-4xl text-(--accent) mb-3 group-hover:scale-105 transition-transform origin-left drop-shadow-md">SEVEN</h4>
-                            <p class="font-content text-base font-light text-(--text-h)">67676767676767676767676767676767 67676767676767676767676767676767</p>
+                            <h4 class="font-heading text-4xl text-(--accent) mb-3 group-hover:scale-105 transition-transform origin-left drop-shadow-md">hardware</h4>
+                            <p class="font-content text-base font-light text-(--text-h)">Design hardware that implements AI or Machine Learning to receive funding to build it! Earn bolts for your physical work!</p>
                         </div>
                     </div>
         
