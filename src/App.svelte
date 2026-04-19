@@ -11,18 +11,17 @@
     import { ScrollTrigger } from "gsap/ScrollTrigger";
     import { ScrollSmoother } from "gsap/ScrollSmoother";
 
-    gsap.registerPlugin(ScrollTrigger,ScrollSmoother);
-
-    const smoothie = ScrollSmoother.create({
-        smooth: 1,
-        effects: true,
-        normalizeScroll: true
-    });
-
     /** @type {HTMLElement | undefined} */
     let overlay;
 
     onMount(() => {
+        gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+        const smoothie = ScrollSmoother.create({
+            smooth: 1,
+            effects: true,
+            normalizeScroll: true
+        });
+
         const renderer = new p5((p) => {
             /** @typedef {{ x: number; y: number; vx: number; vy: number }} CloudPoint */
             const LINK_DISTANCE = 143.11;
@@ -98,7 +97,10 @@
             };
         });
 
-        return () => renderer.remove();
+        return () => {
+            smoothie.kill();
+            renderer.remove();
+        };
     });
 </script>
 
