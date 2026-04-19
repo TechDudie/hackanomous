@@ -27,7 +27,12 @@
                     padding-bottom: ${t * paddingBottom}px;
                     margin-top: ${t * marginTop}px;
                     margin-bottom: ${t * marginBottom}px;
-                    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), 0 calc(100% + 20px));
+                    clip-path: polygon(
+                        0 0,
+                        ${t * 100}% 0,
+                        ${t * 100}% calc(${t * 100}% - ${t * 20}px),
+                        0 calc(${t * 100}% + ${t * 20}px)
+                    );
                 `;
             }
         };
