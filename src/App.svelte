@@ -1,5 +1,7 @@
 <script>
+    import { onMount } from "svelte";
     import { Mouse } from "lucide-svelte";
+    import p5 from "p5";
     import hackclub from "./assets/hackclub.svg";
     import orpheus from "./assets/orpheus.svg";
     import mascotDark from "./assets/mascot_dark.svg";
@@ -15,6 +17,88 @@
         smooth: 1,
         effects: true,
         normalizeScroll: true
+    });
+
+    /** @type {HTMLElement | undefined} */
+    let overlay;
+
+    onMount(() => {
+        const renderer = new p5((p) => {
+            /** @typedef {{ x: number; y: number; vx: number; vy: number }} CloudPoint */
+            const LINK_DISTANCE = 143.11;
+            /** @type {CloudPoint[]} */
+            const points = [];
+
+            const getPointCount = () => Math.max(67, Math.round((p.width * p.height * 128) / (1920 * 1080)));
+
+            const randomVelocity = () => {
+                const speed = p.random(0.10, 0.30);
+                return speed * (p.random() > 0.5 ? 1 : -1);
+            };
+
+            const resetPoints = () => {
+                points.length = 0;
+                for (let i = 0; i < getPointCount(); i++) {
+                    points.push({
+                        x: p.random(p.width),
+                        y: p.random(p.height),
+                        vx: randomVelocity(),
+                        vy: randomVelocity()
+                    });
+                }
+            };
+
+            p.setup = () => {
+                if (!overlay) return;
+                const canvas = p.createCanvas(window.innerWidth, window.innerHeight);
+                canvas.parent(overlay);
+                canvas.style("pointer-events", "none");
+                p.pixelDensity(1);
+                p.frameRate(60);
+                resetPoints();
+            };
+
+            p.draw = () => {
+                p.clear();
+
+                for (let i = 0; i < points.length; i++) {
+                    const point = points[i];
+                    point.x += point.vx;
+                    point.y += point.vy;
+
+                    if (point.x <= 0 || point.x >= p.width) point.vx *= -1;
+                    if (point.y <= 0 || point.y >= p.height) point.vy *= -1;
+                }
+
+                const maxDistanceSq = LINK_DISTANCE * LINK_DISTANCE;
+                for (let i = 0; i < points.length; i++) {
+                    for (let j = i + 1; j < points.length; j++) {
+                        const dx = points[i].x - points[j].x;
+                        const dy = points[i].y - points[j].y;
+                        const d2 = dx * dx + dy * dy;
+                        if (d2 > maxDistanceSq) continue;
+
+                        const alpha = (1 - d2 / maxDistanceSq) * 67;
+                        p.stroke(110, 255, 210, alpha);
+                        p.strokeWeight(1);
+                        p.line(points[i].x, points[i].y, points[j].x, points[j].y);
+                    }
+                }
+
+                p.noStroke();
+                p.fill(110, 255, 210, 115);
+                for (let i = 0; i < points.length; i++) {
+                    p.circle(points[i].x, points[i].y, 3.2);
+                }
+            };
+
+            p.windowResized = () => {
+                p.resizeCanvas(window.innerWidth, window.innerHeight);
+                resetPoints();
+            };
+        });
+
+        return () => renderer.remove();
     });
 </script>
 
@@ -41,6 +125,8 @@
         <!-- <section class="absolute top-[50dvh] left-1/2 translate-x-[-23rem] translate-y-[-12rem] -rotate-[15deg] z-1 underline underline-offset-2 decoration-(--accent-border)">
             <h6 class="font-mono text-(--accent-border) tracking-wider">hackanomous presents</h6>
         </section> -->
+
+        <section bind:this={overlay} class="absolute top-0 left-0 w-full h-full pointer-events-none z-0"></section>
         
         <!-- landing -->
         <section class="min-h-[100dvh] flex justify-center items-center py-12 px-4 bg-[linear-gradient(150deg,#080E12,#0B1618)]">
