@@ -135,7 +135,7 @@
             <div class="relative">
                 <img src={mascotDark} class="base absolute top-3 -right-6" width="160" alt="anomaly, our mascot!" />
                 <div class="w-fit border-2 border-dashed border-(--code-bg) rounded-2xl px-16 py-2 relative z-10 bg-[linear-gradient(175deg,var(--bg)_0%,#0B1618_33%,#080E12_100%)]">
-                    <h3 class="font-content font-extralight text-sm text-(--text-h) tracking-widest">COMING SOON</h3>
+                    <h3 class="font-mono font-extralight text-sm text-(--text-h) tracking-widest">COMING SOON</h3>
                 </div>
                 <h1 class="font-heading font-regular text-7xl text-(--accent) mt-6">
                     BUILD <span class="font-semibold">AI</span>.
@@ -144,8 +144,8 @@
                     GET <span class="font-semibold">PRIZES</span>!
                 </h1>
                 <div class="mt-8 flex">
-                    <input id="rsvp-input" class="flex-1 px-4 font-content font-light border-2 border-solid border-(--accent) text-(--accent-border) rounded-xl py-3 mr-4 focus:outline-none focus:border-(--accent-hover) focus:shadow-[0_0_67px_color-mix(in_srgb,var(--accent-hover)_6.7%,transparent)]" style="transition: box-shadow 0.35s ease-out, border-color 0.15s ease-out, background-color 0.15s ease-out;" type="text" placeholder="you@example.com" />
-                    <button onclick={() => window.open("https://hackanomous-rsvp.fillout.com/t/4oPTMjqFuaus", "_blank")} class="font-content font-semibold border-2 border-solid border-(--accent) bg-(--accent) text-(--bg) rounded-xl px-10 py-3 cursor-pointer hover:bg-(--accent-hover) hover:border-(--accent-hover) hover:shadow-[0_0_67px_color-mix(in_srgb,var(--accent-hover)_6.7%,transparent)]" style="transition: box-shadow 0.35s ease-out, border-color 0.15s ease-out, background-color 0.15s ease-out;">RSVP!</button>
+                    <input id="rsvp-input" class="flex-1 px-4 font-mono font-light border-2 border-solid border-(--accent) text-(--accent-border) rounded-xl py-3 mr-4 focus:outline-none focus:border-(--accent-hover) focus:shadow-[0_0_67px_color-mix(in_srgb,var(--accent-hover)_6.7%,transparent)]" style="transition: box-shadow 0.35s ease-out, border-color 0.15s ease-out, background-color 0.15s ease-out;" type="text" placeholder="you@example.com" />
+                    <button onclick={() => window.open("https://hackanomous-rsvp.fillout.com/t/4oPTMjqFuaus", "_blank")} class="font-mono font-semibold border-2 border-solid border-(--accent) bg-(--accent) text-(--bg) rounded-xl px-10 py-3 cursor-pointer hover:bg-transparent hover:text-(--accent) hover:shadow-[0_0_67px_color-mix(in_srgb,var(--accent-hover)_6.7%,transparent)]" style="transition: box-shadow 0.35s ease-out, border-color 0.15s ease-out, background-color 0.15s ease-out, color 0.15s ease-out;">RSVP!</button>
                 </div>
             </div>
         </section>
