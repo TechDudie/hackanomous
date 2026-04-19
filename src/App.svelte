@@ -1,15 +1,15 @@
 <script>
     import { onMount } from "svelte";
+    
+    import { gsap } from "gsap";
+    import { ScrollSmoother } from "gsap/ScrollSmoother";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
     import { Mouse } from "lucide-svelte";
     import p5 from "p5";
+
     import hackclub from "./assets/hackclub.svg";
-    import orpheus from "./assets/orpheus.svg";
     import mascotDark from "./assets/mascot_dark.svg";
-
-    import { gsap } from "gsap";
-
-    import { ScrollTrigger } from "gsap/ScrollTrigger";
-    import { ScrollSmoother } from "gsap/ScrollSmoother";
+    import orpheus from "./assets/orpheus.svg";
 
     /** @type {HTMLElement | undefined} */
     let overlay;
