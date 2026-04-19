@@ -24,7 +24,7 @@
         <section class="absolute top-[1.5rem] left-1/2 -translate-x-1/2 z-50 flex items-center gap-2">
             <h6 class="text-(--accent-border) ml-[25.3px]">a hack</h6>
             <a href="https://hackclub.com" target="_blank" rel="noopener noreferrer" class="block">
-                <img src={hackclub} class="cursor-pointer transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-105 hover:drop-shadow-xl active:scale-95 active:-translate-y-0 active:duration-150" width="40" alt="Hack Club logo" />
+                <img src={hackclub} class="cursor-pointer transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-105 hover:drop-shadow-xl active:scale-95 active:-translate-y-1 active:duration-150" width="40" alt="Hack Club logo" />
             </a>
             <h6 class="text-(--accent-border)">club ysws</h6>
         </section>
@@ -79,9 +79,9 @@
             <div class="max-w-5xl w-full flex flex-col lg:flex-row gap-16 items-center z-10">
                 <div class="flex-1 space-y-8">
                     <h2 class="font-mono font-medium text-5xl md:text-7xl text-(--text)">
-                        DESLOP THE <br><span class="font-mono font-bold inline-block bg-clip-text text-transparent" style="background-image: linear-gradient(90deg, var(--accent) 0%, color-mix(in srgb, var(--accent) 90%, transparent) 100%);">WORLD</span>.
+                        <span class="italic">DE</span>SLOP THE <br><span class="font-mono font-bold inline-block bg-clip-text text-transparent" style="background-image: linear-gradient(90deg, var(--accent) 0%, color-mix(in srgb, var(--accent) 90%, transparent) 100%);">WORLD</span>.
                     </h2>
-                    <p class="font-mono font-normal text-lg md:text-xl leading-relaxed text-(--text-h)">the AI bubble just might be about to pop.<br><span class="font-bold text-(--text-l)">YOUR MISSION:</span> build projects incorporating AI that solve <u><span class="font-bold text-(--text-l)">real-world</span></u> problems.</p>
+                    <p class="font-mono font-normal text-lg md:text-xl leading-relaxed text-(--text-h)">the AI bubble might just be about to pop.<br><span class="font-bold text-(--text-l)">YOUR MISSION:</span> build projects incorporating AI that solve <u><span class="font-bold text-(--text-l)">real-world</span></u> problems.</p>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
                         <div class="border-2 border-dashed border-(--code-bg) p-8 rounded-3xl bg-(--bg) hover:border-(--accent) transition-colors duration-300 group cursor-default">
                             <h4 class="font-heading text-4xl text-(--accent) mb-3 group-hover:scale-105 transition-transform origin-left drop-shadow-md">software</h4>
