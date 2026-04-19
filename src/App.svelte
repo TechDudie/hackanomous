@@ -10,6 +10,7 @@
     import hackclub from "./assets/hackclub.svg";
     import mascotDark from "./assets/mascot_dark.svg";
     import orpheus from "./assets/orpheus.svg";
+    import Question from "./lib/Question.svelte";
 
     /** @type {HTMLElement | undefined} */
     let overlay;
@@ -199,6 +200,44 @@
             <h1 class="font-mono font-base text-lg md:text-xl text-(--text) tracking-wider text-center">
                 more info coming soon...
             </h1>
+
+            <div class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-(--accent) to-transparent opacity-67"></div>
+        </section>
+
+        <!-- standard FAQ and closing info -->
+        <section class="min-h-[100dvh] bg-[linear-gradient(150deg,#080E12,#0B1618)] px-6 md:px-12 xl:px-24 py-24 flex flex-col justify-start items-center">
+            <div class="max-w-7xl mx-auto w-full">
+                <h1 class="font-heading font-regular text-5xl md:text-6xl text-(--text) mb-12 w-full">FAQ</h1>
+
+                <!-- TODO: answer more flipping questions -->
+                <!-- TODO: also make actually look nice -->
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-24 gap-y-0 w-full">
+                    <!-- column 1 -->
+                    <div class="flex flex-col">
+                        <Question question="Who can participate?">
+                            <!-- vetted answer -->
+                            <p>Anyone between the ages of 13 and 18 can participate in Hackanomous! We welcome students from all skill levels to join us in building and shipping the next generation of AI.</p>
+                        </Question>
+                        <Question question="What kind of projects can I build?">
+                            <!-- vetted answer -->
+                            <p>You can build any project incorporating AI or ML! Whether it's a software application, a hardware device, or something completely original and unique, we want to see your innovation shine.</p>
+                        </Question>
+                    </div>
+
+                    <!-- column 2 -->
+                    <div class="flex flex-col">
+                        <Question question="What is the registration process?">
+                            <!-- vetted answer -->
+                            <p>Registration for Hackanomous is simple! Just scroll up and click the "RSVP" button to fill out the registration form.</p>
+                        </Question>
+                        <Question question="What are the prizes?">
+                            <!-- vetted answer -->
+                            <p>We have a variety of exciting prizes for our participants! Shipped projects will receive Bolts, which can be redeemed for Raspberry Pis, AI Credits, RAM & GPU Grants, and more.</p>
+                        </Question>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
 </div>
