@@ -124,9 +124,9 @@
 
         <!-- hackanomous presents -->
         <!-- not sure about this part, someone who has actual graphic design experience needs to figma it -->
-        <!-- <section class="absolute top-[50dvh] left-1/2 translate-x-[-23rem] translate-y-[-12rem] -rotate-[15deg] z-1 underline underline-offset-2 decoration-(--accent-border)">
+        <section class="absolute top-[50dvh] left-1/2 translate-x-[-23rem] translate-y-[-11rem] -rotate-[15deg] z-1 underline underline-offset-2 decoration-(--accent-border) z-20">
             <h6 class="font-mono text-(--accent-border) tracking-wider">hackanomous presents</h6>
-        </section> -->
+        </section>
 
         <section bind:this={overlay} class="absolute top-0 left-0 w-full h-full pointer-events-none z-0"></section>
         
@@ -147,6 +147,9 @@
                     <input id="rsvp-input" class="flex-1 px-4 font-mono font-light border-2 border-solid border-(--accent) text-(--accent-border) rounded-xl py-3 mr-4 focus:outline-none focus:border-(--accent-hover) focus:shadow-[0_0_67px_color-mix(in_srgb,var(--accent-hover)_6.7%,transparent)]" style="transition: box-shadow 0.35s ease-out, border-color 0.15s ease-out, background-color 0.15s ease-out;" type="text" placeholder="you@example.com" />
                     <button onclick={() => window.open("https://hackanomous-rsvp.fillout.com/t/4oPTMjqFuaus", "_blank")} class="font-mono font-semibold border-2 border-solid border-(--accent) bg-(--accent) text-(--bg) rounded-xl px-10 py-3 cursor-pointer hover:bg-transparent hover:text-(--accent) hover:shadow-[0_0_67px_color-mix(in_srgb,var(--accent-hover)_6.7%,transparent)]" style="transition: box-shadow 0.35s ease-out, border-color 0.15s ease-out, background-color 0.15s ease-out, color 0.15s ease-out;">RSVP!</button>
                 </div>
+                <h6 class="font-mono font-light text-xs text-center text-(--text-h) tracking-widest mt-6">
+                    ages 13-18 only. <span class="underline">june 1</span> to <span class="underline">sept 1</span>.
+                </h6>
             </div>
         </section>
         
@@ -159,7 +162,8 @@
         </section>
         
         <!-- NEXT VIEWPORT -->
-        
+        <!-- disabled for now as i try to make first viewport less vibecoded -->
+        {#if false}
         <section class="min-h-[100dvh] bg-[#000000] flex flex-col justify-center items-center py-20 px-4 sm:px-8 relative overflow-hidden">
             <!-- Subtle top border glow -->
             <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-(--accent) to-transparent opacity-67"></div>
@@ -186,6 +190,15 @@
                     </div>
                 </div>
             </div>
+        </section>
+        {/if}
+
+        <section class="min-h-[100dvh] bg-[#000000] flex flex-col justify-center items-center py-20 px-4 sm:px-8 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-(--accent) to-transparent opacity-67"></div>
+
+            <h1 class="font-mono font-base text-lg md:text-xl text-(--text) tracking-wider text-center">
+                more info coming soon...
+            </h1>
         </section>
     </div>
 </div>
