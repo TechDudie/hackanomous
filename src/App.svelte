@@ -126,7 +126,7 @@
         <!-- hackanomous presents -->
         <!-- not sure about this part, someone who has actual graphic design experience needs to figma it -->
         <section class="absolute top-[50dvh] left-1/2 translate-x-[-23rem] translate-y-[-11rem] -rotate-[15deg] z-1 underline underline-offset-2 decoration-(--accent-border) z-20">
-            <h6 class="font-mono text-(--accent-border) tracking-wider">hackanomous presents</h6>
+            <h6 class="font-content text-(--accent-border) tracking-wider">hackanomous presents</h6>
         </section>
 
         <section bind:this={overlay} class="absolute top-0 left-0 w-full h-full pointer-events-none z-0"></section>
