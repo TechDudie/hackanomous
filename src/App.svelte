@@ -1,6 +1,6 @@
 <script>
     import { onMount } from "svelte";
-    
+
     import { gsap } from "gsap";
     import { ScrollSmoother } from "gsap/ScrollSmoother";
     import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -24,7 +24,7 @@
         const smoothie = ScrollSmoother.create({
             smooth: 1,
             effects: true,
-            normalizeScroll: true
+            normalizeScroll: true,
         });
 
         const scrollerEl = horizontalScroller;
@@ -42,8 +42,8 @@
                     scrub: true,
                     pin: true,
                     anticipatePin: 1,
-                    invalidateOnRefresh: true
-                }
+                    invalidateOnRefresh: true,
+                },
             });
 
         const renderer = new p5((p) => {
@@ -55,7 +55,7 @@
             const getPointCount = () => Math.max(67, Math.round((p.width * p.height * 128) / (1920 * 1080)));
 
             const randomVelocity = () => {
-                const speed = p.random(0.10, 0.30);
+                const speed = p.random(0.1, 0.3);
                 return speed * (p.random() > 0.5 ? 1 : -1);
             };
 
@@ -66,7 +66,7 @@
                         x: p.random(p.width),
                         y: p.random(p.height),
                         vx: randomVelocity(),
-                        vy: randomVelocity()
+                        vy: randomVelocity(),
                     });
                 }
             };
@@ -157,7 +157,7 @@
         </section>
 
         <section bind:this={overlay} class="absolute top-0 left-0 w-full h-full pointer-events-none z-0"></section>
-        
+
         <!-- landing -->
         <section class="min-h-[100dvh] flex justify-center items-center py-12 px-4 bg-[linear-gradient(150deg,#080E12,#0B1618)]">
             <div class="relative">
@@ -183,7 +183,7 @@
                 </h6>
             </div>
         </section>
-        
+
         <!-- scroll down -->
         <section class="absolute top-[calc(100dvh-2rem)] left-1/2 -translate-x-1/2 -translate-y-full text-(--accent-border)">
             <div class="flex flex-row items-center gap-3 floater">
@@ -191,37 +191,37 @@
                 <span class="font-content font-light text-base tracking-widest">SCROLL DOWN</span>
             </div>
         </section>
-        
+
         <!-- NEXT VIEWPORT -->
         <!-- disabled for now as i try to make first viewport less vibecoded -->
         {#if false}
-        <section class="min-h-[100dvh] bg-[#000000] flex flex-col justify-center items-center py-20 px-4 sm:px-8 relative overflow-hidden">
-            <!-- Subtle top border glow -->
-            <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-(--accent) to-transparent opacity-67"></div>
-        
-            <div class="max-w-5xl w-full flex flex-col lg:flex-row gap-16 items-center z-10">
-                <div class="flex-1 space-y-8">
-                    <h2 class="font-mono font-medium text-5xl md:text-7xl text-(--text)">
-                        <span class="italic">DE</span>SLOP THE <br><span class="font-mono font-bold inline-block bg-clip-text text-transparent" style="background-image: linear-gradient(90deg, var(--accent) 0%, color-mix(in srgb, var(--accent) 90%, transparent) 100%);">WORLD</span>.
-                    </h2>
-                    <p class="font-mono font-normal text-lg md:text-xl leading-relaxed text-(--text-h)">the AI bubble might just be about to pop.<br><span class="font-bold text-(--text-l)">YOUR MISSION:</span> build projects incorporating AI that solve <u><span class="font-bold text-(--text-l)">real-world</span></u> problems.</p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
-                        <div class="border-2 border-dashed border-(--code-bg) p-8 rounded-3xl bg-(--bg) hover:border-(--accent) transition-colors duration-300 group cursor-default">
-                            <h4 class="font-heading text-4xl text-(--accent) mb-3 group-hover:scale-105 transition-transform origin-left drop-shadow-md">software</h4>
-                            <p class="font-content text-base font-light text-(--text-h)">Build software that implements AI or Machine Learning to earn Bolts! Use them to buy including Raspberry PIs, AI Credits, RAM & GPU Grants, and more!</p>
+            <section class="min-h-[100dvh] bg-[#000000] flex flex-col justify-center items-center py-20 px-4 sm:px-8 relative overflow-hidden">
+                <!-- Subtle top border glow -->
+                <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-(--accent) to-transparent opacity-67"></div>
+
+                <div class="max-w-5xl w-full flex flex-col lg:flex-row gap-16 items-center z-10">
+                    <div class="flex-1 space-y-8">
+                        <h2 class="font-mono font-medium text-5xl md:text-7xl text-(--text)">
+                            <span class="italic">DE</span>SLOP THE <br /><span class="font-mono font-bold inline-block bg-clip-text text-transparent" style="background-image: linear-gradient(90deg, var(--accent) 0%, color-mix(in srgb, var(--accent) 90%, transparent) 100%);">WORLD</span>.
+                        </h2>
+                        <p class="font-mono font-normal text-lg md:text-xl leading-relaxed text-(--text-h)">the AI bubble might just be about to pop.<br /><span class="font-bold text-(--text-l)">YOUR MISSION:</span> build projects incorporating AI that solve <u><span class="font-bold text-(--text-l)">real-world</span></u> problems.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+                            <div class="border-2 border-dashed border-(--code-bg) p-8 rounded-3xl bg-(--bg) hover:border-(--accent) transition-colors duration-300 group cursor-default">
+                                <h4 class="font-heading text-4xl text-(--accent) mb-3 group-hover:scale-105 transition-transform origin-left drop-shadow-md">software</h4>
+                                <p class="font-content text-base font-light text-(--text-h)">Build software that implements AI or Machine Learning to earn Bolts! Use them to buy including Raspberry PIs, AI Credits, RAM & GPU Grants, and more!</p>
+                            </div>
+                            <div class="border-2 border-dashed border-(--code-bg) p-8 rounded-3xl bg-(--bg) hover:border-(--accent) transition-colors duration-300 group cursor-default">
+                                <h4 class="font-heading text-4xl text-(--accent) mb-3 group-hover:scale-105 transition-transform origin-left drop-shadow-md">hardware</h4>
+                                <p class="font-content text-base font-light text-(--text-h)">Design hardware that implements AI or Machine Learning to receive funding to build it! Earn bolts for your physical work!</p>
+                            </div>
                         </div>
-                        <div class="border-2 border-dashed border-(--code-bg) p-8 rounded-3xl bg-(--bg) hover:border-(--accent) transition-colors duration-300 group cursor-default">
-                            <h4 class="font-heading text-4xl text-(--accent) mb-3 group-hover:scale-105 transition-transform origin-left drop-shadow-md">hardware</h4>
-                            <p class="font-content text-base font-light text-(--text-h)">Design hardware that implements AI or Machine Learning to receive funding to build it! Earn bolts for your physical work!</p>
+
+                        <div class="pt-8">
+                            <button onclick={() => window.scrollTo({ top: 0, behavior: "smooth" })} class="font-mono font-semibold border-2 border-solid border-(--accent) text-(--accent) hover:bg-(--accent) hover:text-(--bg) rounded-xl px-12 py-4 cursor-pointer focus:outline-none hover:-translate-y-1 hover:shadow-[0_0_30px_color-mix(in_srgb,var(--accent)_30%,transparent)] transition-all duration-300 tracking-wide text-lg"> REGISTER NOW </button>
                         </div>
-                    </div>
-        
-                    <div class="pt-8">
-                        <button onclick={() => window.scrollTo({ top: 0, behavior: "smooth" })} class="font-mono font-semibold border-2 border-solid border-(--accent) text-(--accent) hover:bg-(--accent) hover:text-(--bg) rounded-xl px-12 py-4 cursor-pointer focus:outline-none hover:-translate-y-1 hover:shadow-[0_0_30px_color-mix(in_srgb,var(--accent)_30%,transparent)] transition-all duration-300 tracking-wide text-lg"> REGISTER NOW </button>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
         {/if}
 
         <section bind:this={horizontalSection} class="min-h-[100dvh] bg-[#000000] flex flex-col justify-center items-center relative overflow-hidden">
@@ -230,14 +230,10 @@
             <div class="w-full overflow-hidden">
                 <div id="horizontal-scroller" bind:this={horizontalScroller} class="w-[200dvw] max-w-none flex items-center">
                     <div class="w-screen shrink-0 flex justify-center px-4">
-                        <h1 class="font-mono font-base text-lg md:text-xl text-(--text) tracking-wider text-center">
-                            more info coming soon...
-                        </h1>
+                        <h1 class="font-mono font-base text-lg md:text-xl text-(--text) tracking-wider text-center">more info coming soon...</h1>
                     </div>
                     <div class="w-screen shrink-0 flex justify-center px-4">
-                        <h1 class="font-mono font-base text-lg md:text-xl text-(--text) tracking-wider text-center">
-                            ...noos gnimoc ofni erom
-                        </h1>
+                        <h1 class="font-mono font-base text-lg md:text-xl text-(--text) tracking-wider text-center">...noos gnimoc ofni erom</h1>
                     </div>
                 </div>
             </div>
