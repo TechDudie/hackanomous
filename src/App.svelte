@@ -14,6 +14,10 @@
 
     /** @type {HTMLElement | undefined} */
     let overlay;
+    /** @type {HTMLDivElement | undefined} */
+    let horizontalScroller;
+    /** @type {HTMLElement | undefined} */
+    let horizontalSection;
 
     onMount(() => {
         gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -23,9 +27,28 @@
             normalizeScroll: true
         });
 
+        const scrollerEl = horizontalScroller;
+        const scrollerSectionEl = horizontalSection;
+        const horizontalScrollTween =
+            scrollerEl &&
+            scrollerSectionEl &&
+            gsap.to(scrollerEl, {
+                x: () => -Math.max(0, scrollerEl.scrollWidth - scrollerSectionEl.clientWidth),
+                ease: "none",
+                scrollTrigger: {
+                    trigger: scrollerSectionEl,
+                    start: "top top",
+                    end: () => `+=${Math.max(0, scrollerEl.scrollWidth - scrollerSectionEl.clientWidth)}`,
+                    scrub: true,
+                    pin: true,
+                    anticipatePin: 1,
+                    invalidateOnRefresh: true
+                }
+            });
+
         const renderer = new p5((p) => {
             /** @typedef {{ x: number; y: number; vx: number; vy: number }} CloudPoint */
-            const LINK_DISTANCE = 143.11;
+            const LINK_DISTANCE = 143.11; // +25% of 128
             /** @type {CloudPoint[]} */
             const points = [];
 
@@ -99,8 +122,12 @@
         });
 
         return () => {
-            smoothie.kill();
             renderer.remove();
+
+            smoothie.kill();
+
+            horizontalScrollTween?.scrollTrigger?.kill();
+            horizontalScrollTween?.kill();
         };
     });
 </script>
@@ -109,11 +136,11 @@
     <div id="smooth-content">
         <!-- hackclub icon -->
         <section class="absolute top-[1.5rem] left-1/2 -translate-x-1/2 z-50 flex items-center gap-2">
-            <h6 class="text-(--accent-border) ml-[25.3px]">a hack</h6>
+            <h6 class="text-(--accent-border) ml-[26.13px] tracking-wide">a hack</h6>
             <a href="https://hackclub.com" target="_blank" rel="noopener noreferrer" class="block">
                 <img src={hackclub} class="cursor-pointer transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-105 hover:drop-shadow-xl active:scale-95 active:-translate-y-1 active:duration-150" width="40" alt="Hack Club logo" />
             </a>
-            <h6 class="text-(--accent-border)">club ysws</h6>
+            <h6 class="text-(--accent-border) tracking-wide">club ysws</h6>
         </section>
 
         <!-- orpheus flag -->
@@ -144,12 +171,15 @@
                 <h1 class="font-heading font-regular text-7xl text-(--text) mt-4">
                     GET <span class="font-semibold">PRIZES</span>!
                 </h1>
-                <div class="mt-8 flex">
-                    <input id="rsvp-input" class="flex-1 px-4 font-mono font-light border-2 border-solid border-(--accent) text-(--accent-border) rounded-xl py-3 mr-4 focus:outline-none focus:border-(--accent-hover) focus:shadow-[0_0_67px_color-mix(in_srgb,var(--accent-hover)_6.7%,transparent)]" style="transition: box-shadow 0.35s ease-out, border-color 0.15s ease-out, background-color 0.15s ease-out;" type="text" placeholder="you@example.com" />
+                <div class="mt-8 flex relative z-10">
+                    <div class="relative flex-1 mr-4">
+                        <input id="rsvp-input" class="peer w-full px-4 font-mono font-light border-2 border-solid border-(--accent) text-(--text-h) rounded-xl py-3 focus:outline-none focus:border-(--accent-hover) focus:shadow-[0_0_67px_color-mix(in_srgb,var(--accent-hover)_6.7%,transparent)] bg-transparent placeholder:text-(--accent-border) placeholder-opacity-100" style="transition: box-shadow 0.35s ease-out, border-color 0.15s ease-out, background-color 0.15s ease-out;" type="text" placeholder="you@example.com" />
+                        <label for="rsvp-input" class="absolute left-3 -top-2.5 px-1 font-mono text-xs font-semibold text-(--accent-hover) bg-[#0a1215] opacity-0 translate-y-2 pointer-events-none transition-all duration-300 peer-focus:opacity-100 peer-focus:translate-y-0 rounded-sm border-2">email</label>
+                    </div>
                     <button onclick={() => window.open("https://hackanomous-rsvp.fillout.com/t/4oPTMjqFuaus", "_blank")} class="font-mono font-semibold border-2 border-solid border-(--accent) bg-(--accent) text-(--bg) rounded-xl px-10 py-3 cursor-pointer hover:bg-transparent hover:text-(--accent) hover:shadow-[0_0_67px_color-mix(in_srgb,var(--accent-hover)_6.7%,transparent)]" style="transition: box-shadow 0.35s ease-out, border-color 0.15s ease-out, background-color 0.15s ease-out, color 0.15s ease-out;">RSVP!</button>
                 </div>
                 <h6 class="font-mono font-light text-xs text-center text-(--text-h) tracking-widest mt-6">
-                    ages 13-18 only. <span class="underline underline-offset-2">june 1</span> to <span class="underline underline-offset-2">sept 1</span>.
+                    ages 13-18 only. <span class="underline underline-offset-2">Jun 1</span> to <span class="underline underline-offset-2">Sept 1</span>.
                 </h6>
             </div>
         </section>
@@ -194,12 +224,23 @@
         </section>
         {/if}
 
-        <section class="min-h-[100dvh] bg-[#000000] flex flex-col justify-center items-center py-20 px-4 sm:px-8 relative overflow-hidden">
+        <section bind:this={horizontalSection} class="min-h-[100dvh] bg-[#000000] flex flex-col justify-center items-center relative overflow-hidden">
             <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-(--accent) to-transparent opacity-67"></div>
 
-            <h1 class="font-mono font-base text-lg md:text-xl text-(--text) tracking-wider text-center">
-                more info coming soon...
-            </h1>
+            <div class="w-full overflow-hidden">
+                <div id="horizontal-scroller" bind:this={horizontalScroller} class="w-[200dvw] max-w-none flex items-center">
+                    <div class="w-screen shrink-0 flex justify-center px-4">
+                        <h1 class="font-mono font-base text-lg md:text-xl text-(--text) tracking-wider text-center">
+                            more info coming soon...
+                        </h1>
+                    </div>
+                    <div class="w-screen shrink-0 flex justify-center px-4">
+                        <h1 class="font-mono font-base text-lg md:text-xl text-(--text) tracking-wider text-center">
+                            ...noos gnimoc ofni erom
+                        </h1>
+                    </div>
+                </div>
+            </div>
 
             <div class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-(--accent) to-transparent opacity-67"></div>
         </section>
@@ -207,7 +248,7 @@
         <!-- standard FAQ and closing info -->
         <section class="min-h-[100dvh] bg-[linear-gradient(150deg,#080E12,#0B1618)] px-6 md:px-12 xl:px-24 py-24 flex flex-col justify-start items-center">
             <div class="max-w-7xl mx-auto w-full">
-                <h1 class="font-heading font-regular text-5xl md:text-6xl text-(--text) mb-12 w-full">FAQ</h1>
+                <h1 class="font-heading font-regular text-5xl md:text-6xl text-(--accent) mb-12 w-full">FAQ</h1>
 
                 <!-- TODO: answer more flipping questions -->
                 <!-- TODO: also make actually look nice -->
