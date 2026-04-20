@@ -68,7 +68,7 @@
             placement: "top",
             date: "FEB 2025",
             title: "VIBECODING TERMED",
-            description: "AI researcher Andrej Karpathy coins the term \"vibe coding\" where users just talk to AI and forget the actual code exists.",
+            description: 'AI researcher Andrej Karpathy coins the term "vibe coding" where users just talk to AI and forget the actual code exists.',
         },
         {
             left: "80dvw",
@@ -236,7 +236,6 @@
 </script>
 
 <div id="smooth-wrapper" class="relative overflow-x-clip bg-[linear-gradient(150deg,#080E12,#0B1618)]">
-
     <!-- point cloud overlay -->
     <div bind:this={overlay} class="fixed inset-0 w-dvw h-dvh pointer-events-none z-0"></div>
 
@@ -351,16 +350,14 @@
                     <div class="absolute top-1/2 left-[165dvw] -translate-y-1/2 w-[85dvw] sm:w-[70dvw] md:w-[60dvw] lg:w-[45vw] pr-12 lg:pr-24 z-10 flex flex-col items-end text-right">
                         <h2 class="font-mono font-medium text-4xl md:text-6xl text-(--text) leading-tight">
                             <span class="italic">DE</span>SLOP THE <br />
-                            <span class="font-mono font-bold inline-block bg-clip-text text-transparent bg-[linear-gradient(90deg,var(--accent)_0%,color-mix(in_srgb,var(--accent)_80%,transparent)_100%)]">
-                                WORLD.
-                            </span>
+                            <span class="font-mono font-bold inline-block bg-clip-text text-transparent bg-[linear-gradient(90deg,var(--accent)_0%,color-mix(in_srgb,var(--accent)_80%,transparent)_100%)]"> WORLD. </span>
                         </h2>
-                        
+
                         <p class="font-mono font-normal text-lg md:text-xl leading-relaxed text-(--text-h) mt-6 max-w-2xl">
                             the AI bubble might just be about to pop.<br />
                             <span class="font-bold text-(--text-l)">YOUR MISSION:</span> build projects incorporating AI that solve <u><span class="font-bold text-(--text-l)">real-world</span></u> problems.
                         </p>
-                        
+
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10 w-full max-w-3xl">
                             <div class="border border-(--code-bg) p-6 rounded-2xl bg-black/40 backdrop-blur-sm hover:border-(--accent) hover:-translate-y-2 hover:shadow-[0_15px_40px_-10px_color-mix(in_srgb,var(--accent)_25%,transparent)] transition-all duration-500 ease-out group cursor-default">
                                 <h4 class="font-heading text-3xl text-(--accent) mb-2 group-hover:-translate-x-2 group-hover:drop-shadow-[0_0_16px_color-mix(in_srgb,var(--accent)_40%,transparent)] transition-all duration-500 text-right">software</h4>
@@ -375,9 +372,7 @@
                         </div>
 
                         <div class="mt-12">
-                            <button onclick={() => window.scrollTo({ top: 0, behavior: "smooth" })} class="font-mono font-semibold border-2 border-solid border-(--accent) text-(--accent) hover:bg-(--accent) hover:text-(--bg) rounded-xl px-12 py-4 cursor-pointer focus:outline-none hover:-translate-y-1 hover:shadow-[0_0_30px_color-mix(in_srgb,var(--accent)_30%,transparent)] transition-all duration-300 tracking-wide text-lg">
-                                REGISTER NOW
-                            </button>
+                            <button onclick={() => window.scrollTo({ top: 0, behavior: "smooth" })} class="font-mono font-semibold border-2 border-solid border-(--accent) text-(--accent) hover:bg-(--accent) hover:text-(--bg) rounded-xl px-12 py-4 cursor-pointer focus:outline-none hover:-translate-y-1 hover:shadow-[0_0_30px_color-mix(in_srgb,var(--accent)_30%,transparent)] transition-all duration-300 tracking-wide text-lg"> REGISTER NOW </button>
                         </div>
                     </div>
                 </div>
@@ -388,12 +383,15 @@
         </section>
 
         <!-- standard FAQ and closing info -->
-        <section class="min-h-[100dvh] px-6 md:px-12 xl:px-24 py-24 pb-[220px] flex flex-col justify-start items-center relative"> <!-- pb-[220px] = calc(16px + 180px + 24px) -->
+        <section class="min-h-[100dvh] px-6 md:px-12 xl:px-24 py-24 pb-[220px] flex flex-col justify-start items-center relative">
+            <!-- pb-[220px] = calc(16px + 180px + 24px) -->
             <!-- faq -->
             <div class="max-w-7xl mx-auto w-full">
                 <div class="relative w-full mb-12">
-                    <h1 class="font-heading font-regular text-5xl md:text-6xl text-(--text) w-full relative z-10">FAQ</h1> <!-- real text -->
-                    <div class="absolute top-0 left-0 font-heading font-regular text-5xl md:text-6xl text-(--accent)" style="transform: translate(6px, 3px);">FAQ</div> <!-- offset text -->
+                    <h1 class="font-heading font-regular text-5xl md:text-6xl text-(--text) w-full relative z-10">FAQ</h1>
+                    <!-- real text -->
+                    <div class="absolute top-0 left-0 font-heading font-regular text-5xl md:text-6xl text-(--accent)" style="transform: translate(6px, 3px);">FAQ</div>
+                    <!-- offset text -->
                 </div>
 
                 <!-- TODO: answer more flipping questions -->
@@ -455,15 +453,15 @@
             <!-- closing info -->
             <div class="bg-black/80 absolute bottom-4 left-1/2 -translate-x-1/2 px-1">
                 <span class="font-mono text-xs text-(--text-h) block">
-                    <span class="text-(--accent)">+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-+</span><br>
-                    <span class="text-(--accent)">|&nbsp;</span># A project by Hack Club&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-(--accent)">&nbsp;|</span><br>
-                    <span class="text-(--accent)">|&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-(--accent)">&nbsp;|</span><br>
-                    <span class="text-(--accent)">|&nbsp;</span>Hack Club is a 501(c)(3) nonprofit and network of 67k+ technical high schoolers. We believe you<span class="text-(--accent)">&nbsp;|</span><br>
-                    <span class="text-(--accent)">|&nbsp;</span>learn best by building so we're creating community and providing grants so you can make awesome<span class="text-(--accent)">&nbsp;|</span><br>
-                    <span class="text-(--accent)">|&nbsp;</span>projects. In the past few years, we've partnered with GitHub to run Summer of Making, hosted&nbsp;&nbsp;&nbsp;<span class="text-(--accent)">&nbsp;|</span><br>
-                    <span class="text-(--accent)">|&nbsp;</span>the world's longest hackathon on land, and ran Canada's largest high school hackathon.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-(--accent)">&nbsp;|</span><br>
-                    <span class="text-(--accent)">|&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-(--accent)">&nbsp;|</span><br>
-                    <span class="text-(--accent)">|&nbsp;</span>At Hack Club, students aren't just learning, they're shipping.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-(--accent)">&nbsp;|</span><br>
+                    <span class="text-(--accent)">+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-+</span><br />
+                    <span class="text-(--accent)">|&nbsp;</span># A project by Hack Club&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-(--accent)">&nbsp;|</span><br />
+                    <span class="text-(--accent)">|&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-(--accent)">&nbsp;|</span><br />
+                    <span class="text-(--accent)">|&nbsp;</span>Hack Club is a 501(c)(3) nonprofit and network of 67k+ technical high schoolers. We believe you<span class="text-(--accent)">&nbsp;|</span><br />
+                    <span class="text-(--accent)">|&nbsp;</span>learn best by building so we're creating community and providing grants so you can make awesome<span class="text-(--accent)">&nbsp;|</span><br />
+                    <span class="text-(--accent)">|&nbsp;</span>projects. In the past few years, we've partnered with GitHub to run Summer of Making, hosted&nbsp;&nbsp;&nbsp;<span class="text-(--accent)">&nbsp;|</span><br />
+                    <span class="text-(--accent)">|&nbsp;</span>the world's longest hackathon on land, and ran Canada's largest high school hackathon.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-(--accent)">&nbsp;|</span><br />
+                    <span class="text-(--accent)">|&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-(--accent)">&nbsp;|</span><br />
+                    <span class="text-(--accent)">|&nbsp;</span>At Hack Club, students aren't just learning, they're shipping.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-(--accent)">&nbsp;|</span><br />
                     <span class="text-(--accent)">+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-+</span>
                 </span>
             </div>
