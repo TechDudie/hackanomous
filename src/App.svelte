@@ -19,6 +19,8 @@
     let horizontalScroller;
     /** @type {HTMLElement | undefined} */
     let horizontalSection;
+    /** @type {gsap.core.Tween | undefined} */
+    let horizontalScrollTween;
 
     const timeline = [
         {
@@ -132,7 +134,7 @@
 
         const scrollerEl = horizontalScroller;
         const scrollerSectionEl = horizontalSection;
-        const horizontalScrollTween =
+        horizontalScrollTween =
             scrollerEl &&
             scrollerSectionEl &&
             gsap.to(scrollerEl, {
@@ -231,6 +233,7 @@
 
             horizontalScrollTween?.scrollTrigger?.kill();
             horizontalScrollTween?.kill();
+            horizontalScrollTween = undefined;
         };
     });
 </script>
@@ -338,7 +341,7 @@
 
                     <!-- timeline events -->
                     {#each timeline as event (event.title)}
-                        <Event {...event} />
+                        <Event {...event} scrollTween={horizontalScrollTween} />
                     {/each}
 
                     <!-- closing node (i.e. present) -->
