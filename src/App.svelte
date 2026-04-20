@@ -4,6 +4,7 @@
     import { gsap } from "gsap";
     import { ScrollSmoother } from "gsap/ScrollSmoother";
     import { ScrollTrigger } from "gsap/ScrollTrigger";
+    import { ScrollToPlugin } from "gsap/ScrollToPlugin";
     import { Mouse } from "lucide-svelte";
     import p5 from "p5";
 
@@ -21,6 +22,8 @@
     let horizontalSection;
     /** @type {gsap.core.Tween | undefined} */
     let horizontalScrollTween;
+    /** @type {ScrollSmoother} */
+    let smoothie;
 
     const timeline = [
         {
@@ -125,8 +128,8 @@
     ];
 
     onMount(() => {
-        gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-        const smoothie = ScrollSmoother.create({
+        gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
+        smoothie = ScrollSmoother.create({
             smooth: 1,
             effects: true,
             normalizeScroll: true,
@@ -374,8 +377,14 @@
                             </div>
                         </div>
 
-                        <div class="mt-12">
-                            <button onclick={() => window.scrollTo({ top: 0, behavior: "smooth" })} class="font-mono font-semibold border-2 border-solid border-(--accent) text-(--accent) hover:bg-(--accent) hover:text-(--bg) rounded-xl px-12 py-4 cursor-pointer focus:outline-none hover:-translate-y-1 hover:shadow-[0_0_30px_color-mix(in_srgb,var(--accent)_30%,transparent)] transition-all duration-300 tracking-wide text-lg"> REGISTER NOW </button>
+                        <div class="flex gap-8">
+                            <div class="mt-12">
+                                <button onclick={() => gsap.to(window, { duration: .3, scrollTo: { y: '#faq', autoKill: true }, ease: 'power2.inOut' })} class="font-mono font-semibold border-2 border-solid border-(--accent) text-(--accent) hover:bg-(--accent) hover:text-(--bg) rounded-xl px-12 py-4 cursor-pointer focus:outline-none hover:-translate-y-1 hover:shadow-[0_0_30px_color-mix(in_srgb,var(--accent)_30%,transparent)] transition-all duration-300 tracking-wide text-lg"> LEARN MORE </button>
+                            </div>
+    
+                            <div class="mt-12">
+                                <button onclick={() => gsap.to(window, { duration: .7, scrollTo: { y: 0, autoKill: true }, ease: 'power2.inOut' })} class="font-mono font-semibold border-2 border-solid border-(--accent) text-(--accent) hover:bg-(--accent) hover:text-(--bg) rounded-xl px-12 py-4 cursor-pointer focus:outline-none hover:-translate-y-1 hover:shadow-[0_0_30px_color-mix(in_srgb,var(--accent)_30%,transparent)] transition-all duration-300 tracking-wide text-lg"> REGISTER NOW </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -386,7 +395,7 @@
         </section>
 
         <!-- standard FAQ and closing info -->
-        <section class="min-h-[100dvh] px-6 md:px-12 xl:px-24 py-24 pb-[220px] flex flex-col justify-start items-center relative">
+        <section id="faq" class="min-h-[100dvh] px-6 md:px-12 xl:px-24 py-24 pb-[220px] flex flex-col justify-start items-center relative">
             <!-- pb-[220px] = calc(16px + 180px + 24px) -->
             <!-- faq -->
             <div class="max-w-7xl mx-auto w-full">
