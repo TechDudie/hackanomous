@@ -10,6 +10,7 @@
     import hackclub from "./assets/hackclub.svg";
     import mascotDark from "./assets/mascot_dark.svg";
     import orpheus from "./assets/orpheus.svg";
+    import Event from "./lib/Event.svelte";
     import Question from "./lib/Question.svelte";
 
     /** @type {HTMLElement | undefined} */
@@ -18,6 +19,108 @@
     let horizontalScroller;
     /** @type {HTMLElement | undefined} */
     let horizontalSection;
+
+    const timeline = [
+        {
+            left: "5dvw",
+            placement: "top",
+            date: "2018",
+            title: "TABNINE RELEASED",
+            description: "The first integration of generative AI in software development.",
+        },
+        {
+            left: "20dvw",
+            placement: "bottom",
+            date: "AUG 2021",
+            title: "GPT-3 CODEX RELEASED",
+            description: "The very first Codex model was released; a code-specialized version of GPT-3.",
+        },
+        {
+            left: "25dvw",
+            placement: "top",
+            date: "JUN 2021",
+            title: "GITHUB COPILOT RELEASED",
+            description: "Leveraging GPT-3 Codex, GitHub Copilot offered seamless integration of AI into coding.",
+        },
+        {
+            left: "40dvw",
+            placement: "bottom",
+            date: "NOV 30, 2022",
+            title: "CHATGPT RELEASED",
+            description: "Drew global public attention towards Artifical Intelligence and its potential capabilities.",
+        },
+        {
+            left: "50dvw",
+            placement: "top",
+            date: "MAR 2023",
+            title: "CURSOR RELEASED",
+            description: "The first replacement of traditional code editors with a more AI-oriented solution.",
+        },
+        {
+            left: "60dvw",
+            placement: "bottom",
+            date: "MAR 2024",
+            title: "DEVIN RELEASED",
+            description: "The world's first fully autonomous AI software engineer, operating with minimal human intervention.",
+        },
+        {
+            left: "80dvw",
+            placement: "top",
+            date: "FEB 2025",
+            title: "VIBECODING TERMED",
+            description: "AI researcher Andrej Karpathy coins the term \"vibe coding\" where users just talk to AI and forget the actual code exists.",
+        },
+        {
+            left: "80dvw",
+            placement: "bottom",
+            date: "FEB 2025",
+            title: "AI SLOP BUILDERS",
+            description: "Tools like Base44 that allow anybody to build AI-powered applications without understanding any code.",
+        },
+        {
+            left: "100dvw",
+            placement: "top",
+            date: "MAR 2025",
+            title: "AI SECURITY SLOP",
+            description: "curl founder Daniel Stenberg bans AI-generated security reports and condemns the tide of AI slop being submitted.",
+        },
+        {
+            left: "105dvw",
+            placement: "bottom",
+            date: "2025",
+            title: "VULNNERABLE CODE",
+            description: "A noticeably sharp uptick in security vulnerabilities reported in AI-generated code, some even actively exploited.",
+        },
+        {
+            left: "120dvw",
+            placement: "top",
+            date: "DEC 2025",
+            title: "KIRO BREAKS AWS",
+            description: "Amazon's internal AI coding agent deleted part of AWS's production infra and rebuilt it, leading to a 13 hour outage.",
+        },
+        {
+            left: "125dvw",
+            placement: "bottom",
+            date: "FEB 2026",
+            title: "AI BUBBLE?",
+            description: "Forecasted >$6T in 2026 global spending. While 88% of organizations experiment with AI, 81% do not report any meaningful gains.",
+            href: "https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-state-of-organizations",
+        },
+        {
+            left: "145dvw",
+            placement: "top",
+            date: "MAR 2026",
+            title: "KIRO BREAKS AMAZON",
+            description: "6.3 million orders were lost across North America.",
+        },
+        {
+            left: "145dvw",
+            placement: "bottom",
+            date: "MAR 2026",
+            title: "AI FRUIT LOVE ISLAND",
+            description: "no.",
+        },
+    ];
 
     onMount(() => {
         gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -234,147 +337,10 @@
                     <!-- base timeline line -->
                     <div class="absolute left-0 right-0 top-1/2 -translate-y-1/2 block h-[2px] w-[calc(150dvw-8px)] bg-(--text-h)"></div>
 
-                    <!-- TODO: migrate timeline events into distinct component -->
-                    
-                    <!-- EVENT 01 (TOP) -->
-                    <div class="absolute top-1/2 left-[5dvw] z-10 hover:z-20 group">
-                        <div class="absolute bottom-0 left-0 w-[2px] h-[120px] bg-(--accent) origin-bottom rotate-[30deg]"></div>
-                        <div class="absolute bottom-[104px] left-[60px] w-[260px] border-b-2 border-(--accent) pb-4 transition-colors duration-300 group-hover:border-(--accent)">
-                            <h4 class="font-mono text-2xl text-(--accent) font-semibold tracking-widest uppercase">2018</h4>
-                            <h5 class="font-heading text-xl text-(--text) mt-3 leading-tight tracking-wide">TABNINE RELEASED</h5>
-                            <p class="font-content text-(--text-h) text-sm mt-2 opacity-80">The first integration of generative AI in software development.</p>
-                        </div>
-                    </div>
-
-                    <!-- EVENT 02 (BOTTOM) -->
-                    <div class="absolute top-1/2 left-[20dvw] z-10 hover:z-20 group">
-                        <div class="absolute top-0 left-0 w-[2px] h-[120px] bg-(--accent) origin-top rotate-[-30deg]"></div>
-                        <div class="absolute top-[104px] left-[60px] w-[260px] border-t-2 border-(--accent) pt-4 transition-colors duration-300 group-hover:border-(--accent)">
-                            <h4 class="font-mono text-2xl text-(--accent) font-semibold tracking-widest uppercase">AUG 2021</h4>
-                            <h5 class="font-heading text-xl text-(--text) mt-3 leading-tight tracking-wide">GPT-3 CODEX RELEASED</h5>
-                            <p class="font-content text-(--text-h) text-sm mt-2 opacity-80">The very first Codex model was released; a code-specialized version of GPT-3.</p>
-                        </div>
-                    </div>
-
-                    <!-- EVENT 03 (TOP) -->
-                    <div class="absolute top-1/2 left-[25dvw] z-10 hover:z-20 group">
-                        <div class="absolute bottom-0 left-0 w-[2px] h-[120px] bg-(--accent) origin-bottom rotate-[30deg]"></div>
-                        <div class="absolute bottom-[104px] left-[60px] w-[260px] border-b-2 border-(--accent) pb-4 transition-colors duration-300 group-hover:border-(--accent)">
-                            <h4 class="font-mono text-2xl text-(--accent) font-semibold tracking-widest uppercase">JUN 2021</h4>
-                            <h5 class="font-heading text-xl text-(--text) mt-3 leading-tight tracking-wide">GITHUB COPILOT RELEASED</h5>
-                            <p class="font-content text-(--text-h) text-sm mt-2 opacity-80">Leveraging GPT-3 Codex, GitHub Copilot offered seamless integration of AI into coding.</p>
-                        </div>
-                    </div>
-
-                    <!-- EVENT 04 (BOTTOM) -->
-                    <div class="absolute top-1/2 left-[40dvw] z-10 hover:z-20 group">
-                        <div class="absolute top-0 left-0 w-[2px] h-[120px] bg-(--accent) origin-top rotate-[-30deg]"></div>
-                        <div class="absolute top-[104px] left-[60px] w-[260px] border-t-2 border-(--accent) pt-4 transition-colors duration-300 group-hover:border-(--accent)">
-                            <h4 class="font-mono text-2xl text-(--accent) font-semibold tracking-widest uppercase">NOV 30, 2022</h4>
-                            <h5 class="font-heading text-xl text-(--text) mt-3 leading-tight tracking-wide">CHATGPT RELEASED</h5>
-                            <p class="font-content text-(--text-h) text-sm mt-2 opacity-80">Drew global public attention towards Artifical Intelligence and its potential capabilities.</p>
-                        </div>
-                    </div>
-
-                    <!-- EVENT 05 (TOP) -->
-                    <div class="absolute top-1/2 left-[50dvw] z-10 hover:z-20 group">
-                        <div class="absolute bottom-0 left-0 w-[2px] h-[120px] bg-(--accent) origin-bottom rotate-[30deg]"></div>
-                        <div class="absolute bottom-[104px] left-[60px] w-[260px] border-b-2 border-(--accent) pb-4 transition-colors duration-300 group-hover:border-(--accent)">
-                            <h4 class="font-mono text-2xl text-(--accent) font-semibold tracking-widest uppercase">MAR 2023</h4>
-                            <h5 class="font-heading text-xl text-(--text) mt-3 leading-tight tracking-wide">CURSOR RELEASED</h5>
-                            <p class="font-content text-(--text-h) text-sm mt-2 opacity-80">The first replacement of traditional code editors with a more AI-oriented solution.</p>
-                        </div>
-                    </div>
-
-                    <!-- EVENT 06 (BOTTOM) -->
-                    <div class="absolute top-1/2 left-[60dvw] z-10 hover:z-20 group">
-                        <div class="absolute top-0 left-0 w-[2px] h-[120px] bg-(--accent) origin-top rotate-[-30deg]"></div>
-                        <div class="absolute top-[104px] left-[60px] w-[260px] border-t-2 border-(--accent) pt-4 transition-colors duration-300 group-hover:border-(--accent)">
-                            <h4 class="font-mono text-2xl text-(--accent) font-semibold tracking-widest uppercase">MAR 2024</h4>
-                            <h5 class="font-heading text-xl text-(--text) mt-3 leading-tight tracking-wide">DEVIN RELEASED</h5>
-                            <p class="font-content text-(--text-h) text-sm mt-2 opacity-80">The world's first fully autonomous AI software engineer, operating with minimal human intervention.</p>
-                        </div>
-                    </div>
-
-                    <!-- EVENT 07 (TOP) -->
-                    <div class="absolute top-1/2 left-[80dvw] z-10 hover:z-20 group">
-                        <div class="absolute bottom-0 left-0 w-[2px] h-[120px] bg-(--accent) origin-bottom rotate-[30deg]"></div>
-                        <div class="absolute bottom-[104px] left-[60px] w-[260px] border-b-2 border-(--accent) pb-4 transition-colors duration-300 group-hover:border-(--accent)">
-                            <h4 class="font-mono text-2xl text-(--accent) font-semibold tracking-widest uppercase">FEB 2025</h4>
-                            <h5 class="font-heading text-xl text-(--text) mt-3 leading-tight tracking-wide">VIBECODING TERMED</h5>
-                            <p class="font-content text-(--text-h) text-sm mt-2 opacity-80">AI researcher Andrej Karpathy coins the term "vibe coding" where users just talk to AI and forget the actual code exists.</p>
-                        </div>
-                    </div>
-
-                    <!-- EVENT 08 (BOTTOM) -->
-                    <div class="absolute top-1/2 left-[80dvw] z-10 hover:z-20 group">
-                        <div class="absolute top-0 left-0 w-[2px] h-[120px] bg-(--accent) origin-top rotate-[-30deg]"></div>
-                        <div class="absolute top-[104px] left-[60px] w-[260px] border-t-2 border-(--accent) pt-4 transition-colors duration-300 group-hover:border-(--accent)">
-                            <h4 class="font-mono text-2xl text-(--accent) font-semibold tracking-widest uppercase">FEB 2025</h4>
-                            <h5 class="font-heading text-xl text-(--text) mt-3 leading-tight tracking-wide">AI SLOP BUILDERS</h5>
-                            <p class="font-content text-(--text-h) text-sm mt-2 opacity-80">Tools like Base44 that allow anybody to build AI-powered applications without understanding any code.</p>
-                        </div>
-                    </div>
-
-                    <!-- EVENT 09 (TOP) -->
-                    <div class="absolute top-1/2 left-[100dvw] z-10 hover:z-20 group">
-                        <div class="absolute bottom-0 left-0 w-[2px] h-[120px] bg-(--accent) origin-bottom rotate-[30deg]"></div>
-                        <div class="absolute bottom-[104px] left-[60px] w-[260px] border-b-2 border-(--accent) pb-4 transition-colors duration-300 group-hover:border-(--accent)">
-                            <h4 class="font-mono text-2xl text-(--accent) font-semibold tracking-widest uppercase">MAR 2025</h4>
-                            <h5 class="font-heading text-xl text-(--text) mt-3 leading-tight tracking-wide">AI SECURITY SLOP</h5>
-                            <p class="font-content text-(--text-h) text-sm mt-2 opacity-80">curl founder Daniel Stenberg bans AI-generated security reports and condemns the tide of AI slop being submitted.</p>
-                        </div>
-                    </div>
-
-                    <!-- EVENT 10 (BOTTOM) -->
-                    <div class="absolute top-1/2 left-[105dvw] z-10 hover:z-20 group">
-                        <div class="absolute top-0 left-0 w-[2px] h-[120px] bg-(--accent) origin-top rotate-[-30deg]"></div>
-                        <div class="absolute top-[104px] left-[60px] w-[260px] border-t-2 border-(--accent) pt-4 transition-colors duration-300 group-hover:border-(--accent)">
-                            <h4 class="font-mono text-2xl text-(--accent) font-semibold tracking-widest uppercase">2025</h4>
-                            <h5 class="font-heading text-xl text-(--text) mt-3 leading-tight tracking-wide">VULNNERABLE CODE</h5>
-                            <p class="font-content text-(--text-h) text-sm mt-2 opacity-80">A noticeably sharp uptick in security vulnerabilities reported in AI-generated code, some even actively exploited.</p>
-                        </div>
-                    </div>
-
-                    <!-- EVENT 11 (TOP) -->
-                    <div class="absolute top-1/2 left-[120dvw] z-10 hover:z-20 group">
-                        <div class="absolute bottom-0 left-0 w-[2px] h-[120px] bg-(--accent) origin-bottom rotate-[30deg]"></div>
-                        <div class="absolute bottom-[104px] left-[60px] w-[260px] border-b-2 border-(--accent) pb-4 transition-colors duration-300 group-hover:border-(--accent)">
-                            <h4 class="font-mono text-2xl text-(--accent) font-semibold tracking-widest uppercase">DEC 2025</h4>
-                            <h5 class="font-heading text-xl text-(--text) mt-3 leading-tight tracking-wide">KIRO BREAKS AWS</h5>
-                            <p class="font-content text-(--text-h) text-sm mt-2 opacity-80">Amazon's internal AI coding agent deleted part of AWS's production infra and rebuilt it, leading to a 13 hour outage.</p>
-                        </div>
-                    </div>
-
-                    <!-- EVENT 12 (BOTTOM) -->
-                    <div class="absolute top-1/2 left-[125dvw] z-10 hover:z-20 group">
-                        <div class="absolute top-0 left-0 w-[2px] h-[120px] bg-(--accent) origin-top rotate-[-30deg]"></div>
-                        <div class="absolute top-[104px] left-[60px] w-[260px] border-t-2 border-(--accent) pt-4 transition-colors duration-300 group-hover:border-(--accent)">
-                            <h4 class="font-mono text-2xl text-(--accent) font-semibold tracking-widest uppercase">FEB 2026</h4>
-                            <h5 class="font-heading text-xl text-(--text) mt-3 leading-tight tracking-wide">AI BUBBLE?</h5>
-                            <p class="font-content text-(--text-h) text-sm mt-2 opacity-80"><a href="https://www.mckinsey.com/capabilities/people-and-organizational-performance/our-insights/the-state-of-organizations" target="_blank" rel="noopener noreferrer" class="underline">Forecasted &gt;$6T in 2026 global spending. While 88% of organizations experiment with AI, 81% do not report any meaningful gains.</a></p>
-                        </div>
-                    </div>
-
-                    <!-- EVENT 13 (TOP) -->
-                    <div class="absolute top-1/2 left-[145dvw] z-10 hover:z-20 group">
-                        <div class="absolute bottom-0 left-0 w-[2px] h-[120px] bg-(--accent) origin-bottom rotate-[30deg]"></div>
-                        <div class="absolute bottom-[104px] left-[60px] w-[260px] border-b-2 border-(--accent) pb-4 transition-colors duration-300 group-hover:border-(--accent)">
-                            <h4 class="font-mono text-2xl text-(--accent) font-semibold tracking-widest uppercase">MAR 2026</h4>
-                            <h5 class="font-heading text-xl text-(--text) mt-3 leading-tight tracking-wide">KIRO BREAKS AMAZON</h5>
-                            <p class="font-content text-(--text-h) text-sm mt-2 opacity-80">6.3 million orders were lost across North America.</p>
-                        </div>
-                    </div>
-
-                    <!-- EVENT 14 (BOTTOM) -->
-                    <div class="absolute top-1/2 left-[145dvw] z-10 hover:z-20 group">
-                        <div class="absolute top-0 left-0 w-[2px] h-[120px] bg-(--accent) origin-top rotate-[-30deg]"></div>
-                        <div class="absolute top-[104px] left-[60px] w-[260px] border-t-2 border-(--accent) pt-4 transition-colors duration-300 group-hover:border-(--accent)">
-                            <h4 class="font-mono text-2xl text-(--accent) font-semibold tracking-widest uppercase">MAR 2026</h4>
-                            <h5 class="font-heading text-xl text-(--text) mt-3 leading-tight tracking-wide">AI FRUIT LOVE ISLAND</h5>
-                            <p class="font-content text-(--text-h) text-sm mt-2 opacity-80">no.</p>
-                        </div>
-                    </div>
+                    <!-- timeline events -->
+                    {#each timeline as event (event.title)}
+                        <Event {...event} />
+                    {/each}
 
                     <!-- closing node (i.e. present) -->
                     <div class="absolute top-1/2 left-[150dvw] z-10 hover:z-20 group">
