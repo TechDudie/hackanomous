@@ -132,8 +132,12 @@
     });
 </script>
 
-<div id="smooth-wrapper">
-    <div id="smooth-content">
+<div id="smooth-wrapper" class="relative overflow-x-clip bg-[linear-gradient(150deg,#080E12,#0B1618)]">
+
+    <!-- point cloud overlay -->
+    <div bind:this={overlay} class="fixed inset-0 w-dvw h-dvh pointer-events-none z-0"></div>
+
+    <div id="smooth-content" class="relative z-10">
         <!-- hackclub icon -->
         <section class="absolute top-[1.5rem] left-1/2 -translate-x-1/2 z-50 flex items-center gap-2">
             <h6 class="text-(--accent-border) ml-[26.13px] tracking-wide">a hack</h6>
@@ -151,15 +155,12 @@
         </section>
 
         <!-- hackanomous presents -->
-        <!-- not sure about this part, someone who has actual graphic design experience needs to figma it -->
         <section class="absolute top-[50dvh] left-1/2 translate-x-[-23rem] translate-y-[-11rem] -rotate-[15deg] z-1 underline underline-offset-2 decoration-(--accent-border) z-20">
             <h6 class="font-content text-(--accent-border) tracking-wider">hackanomous presents</h6>
         </section>
 
-        <section bind:this={overlay} class="absolute top-0 left-0 w-full h-full pointer-events-none z-0"></section>
-
         <!-- landing -->
-        <section class="min-h-[100dvh] flex justify-center items-center py-12 px-4 bg-[linear-gradient(150deg,#080E12,#0B1618)]">
+        <section class="min-h-[100dvh] flex justify-center items-center py-12 px-4">
             <div class="relative">
                 <img src={mascotDark} class="base absolute top-3 -right-6" width="160" alt="anomaly, our mascot!" />
                 <div class="w-fit border-2 border-dashed border-(--code-bg) rounded-2xl px-16 py-2 relative z-10 bg-[linear-gradient(175deg,var(--bg)_0%,#0B1618_33%,#080E12_100%)]">
@@ -224,7 +225,7 @@
             </section>
         {/if}
 
-        <section bind:this={horizontalSection} class="min-h-[100dvh] bg-[#000000] flex flex-col justify-center items-center relative overflow-hidden">
+        <section bind:this={horizontalSection} class="min-h-[100dvh] flex flex-col justify-center items-center relative overflow-hidden bg-black/80">
             <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-(--accent) to-transparent opacity-67"></div>
 
             <div class="w-full overflow-hidden">
@@ -242,7 +243,7 @@
         </section>
 
         <!-- standard FAQ and closing info -->
-        <section class="min-h-[100dvh] bg-[linear-gradient(150deg,#080E12,#0B1618)] px-6 md:px-12 xl:px-24 py-24 flex flex-col justify-start items-center">
+        <section class="min-h-[100dvh] px-6 md:px-12 xl:px-24 py-24 flex flex-col justify-start items-center">
             <div class="max-w-7xl mx-auto w-full">
                 <h1 class="font-heading font-regular text-5xl md:text-6xl text-(--accent) mb-12 w-full">FAQ</h1>
 
