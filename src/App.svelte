@@ -254,23 +254,23 @@
                     <div class="flex flex-col">
                         <Question question="Who can participate?">
                             <!-- vetted answer -->
-                            <p>Anyone between the ages of 13 and 18 can participate in Hackanomous! We welcome students from all skill levels to join us in building and shipping the next generation of AI.</p>
+                            <p>Anyone between the ages of 13 and 18 can participate in Hackanomous!</p>
                         </Question>
-                        <Question question="What kind of projects can I build?">
+                        <Question question="What projects can I build?">
                             <!-- vetted answer -->
-                            <p>You can build any project incorporating AI or ML! Whether it's a software application, a hardware device, or something completely original and unique, we want to see your innovation shine.</p>
+                            <p>You can build any project incorporating AI or ML! We want to see your innovation shine, whether it's software, hardware, or something completely new and unique.</p>
                         </Question>
                     </div>
 
                     <!-- column 2 -->
                     <div class="flex flex-col">
-                        <Question question="What is the registration process?">
+                        <Question question="How do I register?">
                             <!-- vetted answer -->
                             <p>Registration for Hackanomous is simple! Just scroll up and click the "RSVP" button to fill out the registration form.</p>
                         </Question>
                         <Question question="What are the prizes?">
                             <!-- vetted answer -->
-                            <p>We have a variety of exciting prizes for our participants! Shipped projects will receive Bolts, which can be redeemed for Raspberry Pis, AI Credits, RAM & GPU Grants, and more.</p>
+                            <p>We have a variety of exciting prizes for our participants! Shipped projects will receive Bolts, which can be redeemed for Raspberry Pis, AI credits, RAM & GPU grants, and more.</p>
                         </Question>
                     </div>
                 </div>
