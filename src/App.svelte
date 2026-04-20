@@ -243,10 +243,13 @@
         </section>
 
         <!-- standard FAQ and closing info -->
-        <section class="min-h-[100dvh] px-6 md:px-12 xl:px-24 py-24 flex flex-col justify-start items-center relative">
+        <section class="min-h-[100dvh] px-6 md:px-12 xl:px-24 py-24 pb-[220px] flex flex-col justify-start items-center relative"> <!-- pb-[220px] = calc(16px + 180px + 24px) -->
             <!-- faq -->
             <div class="max-w-7xl mx-auto w-full">
-                <h1 class="font-heading font-regular text-5xl md:text-6xl text-(--accent) mb-12 w-full">FAQ</h1>
+                <div class="relative w-full mb-12">
+                    <h1 class="font-heading font-regular text-5xl md:text-6xl text-(--text) w-full relative z-10">FAQ</h1> <!-- real text -->
+                    <div class="absolute top-0 left-0 font-heading font-regular text-5xl md:text-6xl text-(--accent)" style="transform: translate(6px, 3px);">FAQ</div> <!-- offset text -->
+                </div>
 
                 <!-- TODO: answer more flipping questions -->
                 <!-- TODO: also make actually look nice -->
@@ -256,11 +259,23 @@
                     <div class="flex flex-col">
                         <Question question="Who can participate?">
                             <!-- vetted answer -->
-                            <p>Anyone between the ages of 13 and 18 can participate in Hackanomous!</p>
+                            <p>Anyone between the ages of <span class="font-mono font-bold text-(--accent)">13</span> and <span class="font-mono font-bold text-(--accent)">18</span> (inclusive) can participate in Hackanomous!</p>
                         </Question>
                         <Question question="What projects can I build?">
                             <!-- vetted answer -->
-                            <p>You can build any project incorporating AI or ML! We want to see your innovation shine, whether it's software, hardware, or something completely new and unique.</p>
+                            <p>You can build any project incorporating <span class="font-mono font-bold text-(--accent)">AI</span> or <span class="font-mono font-bold text-(--accent)">ML</span>! We want to see your innovation shine, whether it's software, hardware, or something COMPLETELY new and unique.</p>
+                        </Question>
+                        <Question question="I don't know anything about AI/ML!">
+                            <!-- vetted answer -->
+                            <p><span class="font-mono font-bold text-(--accent)">No problem!</span> We have resources and mentors to help you learn. Plus, the best way to learn is by building, so dive in and start experimenting!</p>
+                        </Question>
+                        <Question question="What are the prizes?">
+                            <!-- vetted answer -->
+                            <p>We have a variety of exciting prizes for our participants! Shipped projects will receive <span class="font-mono font-bold text-(--accent)">Bolts</span>, which can be redeemed for Raspberry Pis, AI credits, RAM & GPU grants, and more. We might even send you an <span class="font-mono font-bold text-(--accent)">RTX 5090</span>!</p>
+                        </Question>
+                        <Question question="Is this legit? What's Hack Club?">
+                            <!-- vetted answer -->
+                            <p><a href="https://hackclub.com" target="_blank" rel="noopener noreferrer" class="font-mono font-bold underline text-(--accent)">Hack Club</a> is the world's largest community of teenage makers, and a 501(c)(3) nonprofit. Hack Club is supported by donations from tech companies like GitHub and individuals like Michael Dell. Hack Club is fiscally transparent.</p>
                         </Question>
                     </div>
 
@@ -268,11 +283,25 @@
                     <div class="flex flex-col">
                         <Question question="How do I register?">
                             <!-- vetted answer -->
-                            <p>Registration for Hackanomous is simple! Just scroll up and click the "RSVP" button to fill out the registration form.</p>
+                            <p>Registration for Hackanomous is simple! Just scroll up and click the <span class="font-mono font-bold text-(--accent)">RSVP</span> button to fill out the registration form.</p>
                         </Question>
-                        <Question question="What are the prizes?">
+                        <Question question="How many projects can I build?">
                             <!-- vetted answer -->
-                            <p>We have a variety of exciting prizes for our participants! Shipped projects will receive Bolts, which can be redeemed for Raspberry Pis, AI credits, RAM & GPU grants, and more.</p>
+                            <p>You can build as many projects as you like, but we encourage you to focus on <span class="font-mono font-bold text-(--accent)">quality over quantity</span>. Your rewards <span class="font-mono font-bold text-(--accent)">scale exponentially</span> with time, so really focus on building something amazing!</p>
+                        </Question>
+                        <Question question="How do I fund hardware?">
+                            <!-- vetted answer -->
+                            <p>Don't worry! You can get up to $100 <span class="font-mono font-bold text-(--accent)">(TODO: TBD)</span> to buy parts to build your hardware project.</p>
+                        </Question>
+                        <Question question="Is this free?">
+                            <!-- vetted answer -->
+                            <p><span class="font-mono font-bold text-(--accent)">Yes!</span> Hackanomous is <span class="font-mono font-bold text-(--accent)">100%</span> free - all the prizes are donated by sponsors or paid for by us! <span class="font-mono text-sm text-(--accent)">*customs may occur outside the US!</span></p>
+                        </Question>
+                        <Question question="I have more questions...">
+                            <!-- vetted answer -->
+                            <p>Ask us in <span class="font-mono font-bold text-(--accent)">#hackanomous-help</span> in Slack!</p>
+                            <!-- switch out when we get an hc email -->
+                            <!-- <p>Ask us in <span class="font-mono font-bold text-(--accent)">#hackanomous-help</span> in Slack, or email us at <a href="mailto:hackanomous@hackclub.com" class="font-mono font-bold underline text-(--accent)">hackanomous@hackclub.com</a>!</p> -->
                         </Question>
                     </div>
                 </div>
@@ -284,7 +313,7 @@
                     <span class="text-(--accent)">+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-+</span><br>
                     <span class="text-(--accent)">|&nbsp;</span># A project by Hack Club&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-(--accent)">&nbsp;|</span><br>
                     <span class="text-(--accent)">|&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-(--accent)">&nbsp;|</span><br>
-                    <span class="text-(--accent)">|&nbsp;</span>Hack Club is a 501(c)(3) nonprofit and network of 60k+ technical high schoolers. We believe you<span class="text-(--accent)">&nbsp;|</span><br>
+                    <span class="text-(--accent)">|&nbsp;</span>Hack Club is a 501(c)(3) nonprofit and network of 67k+ technical high schoolers. We believe you<span class="text-(--accent)">&nbsp;|</span><br>
                     <span class="text-(--accent)">|&nbsp;</span>learn best by building so we're creating community and providing grants so you can make awesome<span class="text-(--accent)">&nbsp;|</span><br>
                     <span class="text-(--accent)">|&nbsp;</span>projects. In the past few years, we've partnered with GitHub to run Summer of Making, hosted&nbsp;&nbsp;&nbsp;<span class="text-(--accent)">&nbsp;|</span><br>
                     <span class="text-(--accent)">|&nbsp;</span>the world's longest hackathon on land, and ran Canada's largest high school hackathon.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-(--accent)">&nbsp;|</span><br>
