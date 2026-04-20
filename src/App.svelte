@@ -446,7 +446,7 @@
                         </Question>
                         <Question question="How do I fund hardware?">
                             <!-- vetted answer -->
-                            <p>Don't worry! You can get up to $100 <span class="font-mono font-bold text-(--accent)">(TODO: TBD)</span> to buy parts to build your hardware project.</p>
+                            <p>Don't worry! You can get up to <span class="font-mono font-bold text-(--accent)">$100</span> <span class="font-mono font-bold text-(--accent)">(TODO: TBD)</span> to buy parts to build your hardware project.</p>
                         </Question>
                         <Question question="Is this free?">
                             <!-- vetted answer -->
@@ -463,10 +463,10 @@
             </div>
 
             <!-- closing info -->
-            <div class="bg-black/80 absolute bottom-4 left-1/2 -translate-x-1/2 px-1">
+            <div class="bg-black/80 absolute bottom-4 left-4 px-1">
                 <span class="font-mono text-xs text-(--text-h) block">
                     <span class="text-(--accent)">+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-+</span><br />
-                    <span class="text-(--accent)">|&nbsp;</span># A project by Hack Club&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-(--accent)">&nbsp;|</span><br />
+                    <span class="text-(--accent)">|&nbsp;</span><span class="font-bold text-(--text)"># A project by Hack Club</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-(--accent)">&nbsp;|</span><br />
                     <span class="text-(--accent)">|&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-(--accent)">&nbsp;|</span><br />
                     <span class="text-(--accent)">|&nbsp;</span>Hack Club is a 501(c)(3) nonprofit and network of 67k+ technical high schoolers. We believe you<span class="text-(--accent)">&nbsp;|</span><br />
                     <span class="text-(--accent)">|&nbsp;</span>learn best by building so we're creating community and providing grants so you can make awesome<span class="text-(--accent)">&nbsp;|</span><br />
@@ -477,6 +477,20 @@
                     <span class="text-(--accent)">+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-+</span>
                 </span>
             </div>
+            
+            <div class="bg-black/80 absolute bottom-4 right-4 px-1">
+                <pre class="font-mono text-xs text-(--text-h) block m-0">
+<span class="text-(--accent)">+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-+</span>
+<span class="text-(--accent)">| </span><span class="font-bold text-(--text)">Hack Club</span>     <span class="font-bold text-(--text)">Resources</span>          <span class="font-bold text-(--text)">Hackanomous</span> <span class="text-(--accent)"> |</span>
+<span class="text-(--accent)">| </span>                                             <span class="text-(--accent)"> |</span>
+<span class="text-(--accent)">| </span><a class="footer-link" href="https://hackclub.com/philosophy/" target="_blank" rel="noopener noreferrer">Philosophy</a>    <a class="footer-link" href="https://events.hackclub.com/" target="_blank" rel="noopener noreferrer">Events</a>             Guides      <span class="text-(--accent)"> |</span>
+<span class="text-(--accent)">| </span><a class="footer-link" href="https://hackclub.com/team/" target="_blank" rel="noopener noreferrer">Our Team</a>      <a class="footer-link" href="https://jams.hackclub.com/" target="_blank" rel="noopener noreferrer">Jams</a>                           <span class="text-(--accent)"> |</span>
+<span class="text-(--accent)">| </span><a class="footer-link" href="https://hackclub.com/jobs/" target="_blank" rel="noopener noreferrer">Jobs (ew)</a>     <a class="footer-link" href="https://toolbox.hackclub.com/" target="_blank" rel="noopener noreferrer">Toolbox</a>                        <span class="text-(--accent)"> |</span>
+<span class="text-(--accent)">| </span><a class="footer-link" href="https://hackclub.com/brand/" target="_blank" rel="noopener noreferrer">Branding</a>      <a class="footer-link" href="https://hackclub.com/map" target="_blank" rel="noopener noreferrer">Clubs Map</a>                      <span class="text-(--accent)"> |</span>
+<span class="text-(--accent)">| </span><a class="footer-link" href="https://hackclub.com/philanthropy/" target="_blank" rel="noopener noreferrer">Donate</a>        <a class="footer-link" href="https://hackclub.com/conduct/" target="_blank" rel="noopener noreferrer">Code of Conduct</a>                <span class="text-(--accent)"> |</span>
+<span class="text-(--accent)">| </span><a class="footer-link" href="https://hackclub.com/imprint/" target="_blank" rel="noopener noreferrer">Imprint</a>       <a class="footer-link" href="https://hackclub.com/privacy/" target="_blank" rel="noopener noreferrer">Privacy &amp; Terms</a>                <span class="text-(--accent)"> |</span>
+<span class="text-(--accent)">+-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-+</span></pre>
+            </div>
         </section>
     </div>
 </div>
@@ -485,6 +499,24 @@
     .floater {
         animation: float 3s ease-in-out infinite;
     }
+
+    .footer-link {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.2s ease, text-decoration-color 0.2s ease;
+    }
+
+    .footer-link:hover {
+        color: var(--accent);
+        text-decoration: underline;
+        text-underline-offset: 2px;
+    }
+
+    .footer-link:focus-visible {
+        outline: 1px dashed var(--accent);
+        outline-offset: 2px;
+    }
+
     @keyframes float {
         0%,
         100% {
