@@ -3,8 +3,8 @@
 
     import { gsap } from "gsap";
     import { ScrollSmoother } from "gsap/ScrollSmoother";
-    import { ScrollTrigger } from "gsap/ScrollTrigger";
     import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
     import { Mouse } from "lucide-svelte";
     import p5 from "p5";
 
@@ -301,38 +301,7 @@
             </div>
         </section>
 
-        <!-- NEXT VIEWPORT -->
-        <!-- disabled for now as i try to make first viewport less vibecoded -->
-        {#if false}
-            <section class="min-h-[100dvh] bg-[#000000] flex flex-col justify-center items-center py-20 px-4 sm:px-8 relative overflow-hidden">
-                <!-- Subtle top border glow -->
-                <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-(--accent) to-transparent opacity-67"></div>
-
-                <div class="max-w-5xl w-full flex flex-col lg:flex-row gap-16 items-center z-10">
-                    <div class="flex-1 space-y-8">
-                        <h2 class="font-mono font-medium text-5xl md:text-7xl text-(--text)">
-                            <span class="italic">DE</span>SLOP THE <br /><span class="font-mono font-bold inline-block bg-clip-text text-transparent" style="background-image: linear-gradient(90deg, var(--accent) 0%, color-mix(in srgb, var(--accent) 90%, transparent) 100%);">WORLD</span>.
-                        </h2>
-                        <p class="font-mono font-normal text-lg md:text-xl leading-relaxed text-(--text-h)">the AI bubble might just be about to pop.<br /><span class="font-bold text-(--text-l)">YOUR MISSION:</span> build projects incorporating AI that solve <u><span class="font-bold text-(--text-l)">real-world</span></u> problems.</p>
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
-                            <div class="border-2 border-dashed border-(--code-bg) p-8 rounded-3xl bg-(--bg) hover:border-(--accent) transition-colors duration-300 group cursor-default">
-                                <h4 class="font-heading text-4xl text-(--accent) mb-3 group-hover:scale-105 transition-transform origin-left drop-shadow-md">software</h4>
-                                <p class="font-content text-base font-light text-(--text-h)">Build software that implements AI or Machine Learning to earn Bolts! Use them to buy including Raspberry PIs, AI Credits, RAM & GPU Grants, and more!</p>
-                            </div>
-                            <div class="border-2 border-dashed border-(--code-bg) p-8 rounded-3xl bg-(--bg) hover:border-(--accent) transition-colors duration-300 group cursor-default">
-                                <h4 class="font-heading text-4xl text-(--accent) mb-3 group-hover:scale-105 transition-transform origin-left drop-shadow-md">hardware</h4>
-                                <p class="font-content text-base font-light text-(--text-h)">Design hardware that implements AI or Machine Learning to receive funding to build it! Earn bolts for your physical work!</p>
-                            </div>
-                        </div>
-
-                        <div class="pt-8">
-                            <button onclick={() => window.scrollTo({ top: 0, behavior: "smooth" })} class="font-mono font-semibold border-2 border-solid border-(--accent) text-(--accent) hover:bg-(--accent) hover:text-(--bg) rounded-xl px-12 py-4 cursor-pointer focus:outline-none hover:-translate-y-1 hover:shadow-[0_0_30px_color-mix(in_srgb,var(--accent)_30%,transparent)] transition-all duration-300 tracking-wide text-lg"> REGISTER NOW </button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        {/if}
-
+        <!-- timeline -->
         <section bind:this={horizontalSection} class="min-h-[100dvh] flex flex-col justify-center items-center relative overflow-hidden bg-black/80">
             <!-- top border strip glow -->
             <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-(--accent) to-transparent opacity-67"></div>
@@ -353,7 +322,7 @@
                     </div>
 
                     <!-- right content -->
-                    <div class="absolute top-1/2 left-[165dvw] -translate-y-1/2 w-[85dvw] sm:w-[70dvw] md:w-[60dvw] lg:w-[45vw] pr-12 lg:pr-24 z-10 flex flex-col items-end text-right">
+                    <div class="absolute top-1/2 left-[165dvw] -translate-y-[calc(50%+10px)] w-[85dvw] sm:w-[70dvw] md:w-[60dvw] lg:w-[45vw] pr-12 lg:pr-24 z-10 flex flex-col items-end text-right">
                         <h2 class="font-mono font-medium text-4xl md:text-6xl text-(--text) leading-tight">
                             <span class="italic">DE</span>SLOP THE <br />
                             <span class="font-mono font-bold inline-block bg-clip-text text-transparent bg-[linear-gradient(90deg,var(--accent)_0%,color-mix(in_srgb,var(--accent)_80%,transparent)_100%)]"> WORLD. </span>
@@ -377,7 +346,7 @@
                             </div>
                         </div>
 
-                        <div class="flex gap-8">
+                        <div class="flex gap-6">
                             <div class="mt-12">
                                 <button onclick={() => gsap.to(window, { duration: .3, scrollTo: { y: '#faq', autoKill: true }, ease: 'power2.inOut' })} class="font-mono font-semibold border-2 border-solid border-(--accent) text-(--accent) hover:bg-(--accent) hover:text-(--bg) rounded-xl px-12 py-4 cursor-pointer focus:outline-none hover:-translate-y-1 hover:shadow-[0_0_30px_color-mix(in_srgb,var(--accent)_30%,transparent)] transition-all duration-300 tracking-wide text-lg"> LEARN MORE </button>
                             </div>
