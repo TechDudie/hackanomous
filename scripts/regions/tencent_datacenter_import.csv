@@ -1,0 +1,19 @@
+region_code,region_name,city_label,az_count,az_ids,latitude,longitude
+ap-beijing,North China (Beijing),"Beijing, China",6,ap-beijing-3|ap-beijing-4|ap-beijing-5|ap-beijing-6|ap-beijing-7|ap-beijing-8,39.9075,116.39723
+ap-shanghai,East China (Shanghai),"Shanghai, China",6,ap-shanghai-2|ap-shanghai-3|ap-shanghai-4|ap-shanghai-5|ap-shanghai-8|ap-shanghai-9,31.22222,121.45806
+ap-nanjing,East China (Nanjing),"Nanjing, Jiangsu, China",3,ap-nanjing-1|ap-nanjing-2|ap-nanjing-3,32.06167,118.77778
+ap-guangzhou,South China (Guangzhou),"Guangzhou, Guangdong, China",5,ap-guangzhou-3|ap-guangzhou-4|ap-guangzhou-5|ap-guangzhou-6|ap-guangzhou-7,23.11667,113.25
+ap-chengdu,Southwest China (Chengdu),"Chengdu, Sichuan, China",2,ap-chengdu-1|ap-chengdu-2,30.66667,104.06667
+ap-chongqing,Southwest China (Chongqing),"Chongqing, China",1,ap-chongqing-1,29.56026,106.55771
+ap-zhongwei,Northwest China (Zhongwei),"Zhongwei, Ningxia, China",1,ap-zhongwei-1,37.51129,105.19067
+ap-hongkong,"Hong Kong (China), Macao (China), and Taiwan (China)",Hong Kong,3,ap-hongkong-1|ap-hongkong-2|ap-hongkong-3,22.27832,114.17469
+ap-singapore,Asia Pacific and the Middle East (Singapore),Singapore,4,ap-singapore-1|ap-singapore-2|ap-singapore-3|ap-singapore-4,1.28967,103.85007
+ap-jakarta,Asia Pacific and the Middle East (Jakarta),"Jakarta, Indonesia",3,ap-jakarta-1|ap-jakarta-2|ap-jakarta-3,-6.21462,106.84513
+ap-seoul,Asia Pacific and the Middle East (Seoul),"Seoul, South Korea",2,ap-seoul-1|ap-seoul-2,37.566,126.9784
+ap-tokyo,Asia Pacific and the Middle East (Tokyo),"Tokyo, Japan",2,ap-tokyo-1|ap-tokyo-2,35.6895,139.69171
+ap-bangkok,Asia Pacific and the Middle East (Bangkok),"Bangkok, Thailand",2,ap-bangkok-1|ap-bangkok-2,13.75398,100.50144
+me-saudi-arabia,Asia Pacific and the Middle East (Saudi Arabia),"Riyadh, Saudi Arabia",2,me-saudi-arabia-1|me-saudi-arabia-2,24.68773,46.72185
+sa-saopaulo,Europe and the Americas (Sao Paulo),"Sao Paulo, Brazil",1,sa-saopaulo-1,-23.5475,-46.63611
+na-siliconvalley,Europe and the Americas (Silicon Valley),"Santa Clara, California, United States",2,na-siliconvalley-1|na-siliconvalley-2,37.3541132,-121.9551740
+na-ashburn,Europe and the Americas (Virginia),"Ashburn, Virginia, United States",2,na-ashburn-1|na-ashburn-2,39.0437192,-77.4874899
+eu-frankfurt,Europe and the Americas (Frankfurt),"Frankfurt, Germany",2,eu-frankfurt-1|eu-frankfurt-2,50.11552,8.68417

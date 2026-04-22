@@ -1,0 +1,15 @@
+region_code,region_name,city_label,latitude,longitude
+NYC1,"New York City, United States",nyc1,40.7127281,-74.0060152
+NYC2,"New York City, United States",nyc2,40.7127281,-74.0060152
+NYC3,"New York City, United States",nyc3,40.7127281,-74.0060152
+AMS3,"Amsterdam, the Netherlands",ams3,52.3730796,4.8924534
+SFO2,"San Francisco, United States",sfo2,37.7879363,-122.4075201
+SFO3,"San Francisco, United States",sfo3,37.7879363,-122.4075201
+SGP1,"Singapore",sgp1,1.3571070,103.8194992
+LON1,"London, United Kingdom",lon1,51.5074456,-0.1277653
+FRA1,"Frankfurt, Germany",fra1,50.1106444,8.6820917
+TOR1,"Toronto, Canada",tor1,43.6534817,-79.3839347
+BLR1,"Bangalore, India",blr1,12.9767936,77.5900820
+SYD1,"Sydney, Australia",syd1,-33.8698439,151.2082848
+ATL1,"Atlanta, United States",atl1,33.7544657,-84.3898151
+RIC1,"Richmond, United States",ric1,37.5385087,-77.4342800

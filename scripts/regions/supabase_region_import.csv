@@ -1,0 +1,18 @@
+region_code,region_name,city_label,latitude,longitude
+us-west-1,West US (North California),San Jose California USA,37.3361663,-121.8905910
+us-west-2,West US (Oregon),Boardman Oregon USA,45.8398550,-119.7005830
+us-east-1,East US (North Virginia),Ashburn Virginia USA,39.0437192,-77.4874899
+us-east-2,East US (Ohio),Columbus Ohio USA,39.9622601,-83.0007065
+ca-central-1,Canada (Central),Montreal Quebec Canada,45.5031824,-73.5698065
+eu-west-1,West EU (Ireland),Dublin Ireland,53.3493795,-6.2605593
+eu-west-2,West Europe (London),London United Kingdom,51.5074456,-0.1277653
+eu-west-3,West EU (Paris),Paris France,48.8588897,2.3200410
+eu-central-1,Central EU (Frankfurt),Frankfurt Germany,50.1106444,8.6820917
+eu-central-2,Central Europe (Zurich),Zurich Switzerland,47.3744489,8.5410422
+eu-north-1,North EU (Stockholm),Stockholm Sweden,59.3251172,18.0710935
+ap-south-1,South Asia (Mumbai),Mumbai India,19.0549990,72.8692035
+ap-southeast-1,Southeast Asia (Singapore),Singapore,1.3571070,103.8194992
+ap-northeast-1,Northeast Asia (Tokyo),Tokyo Japan,35.6768601,139.7638947
+ap-northeast-2,Northeast Asia (Seoul),Seoul South Korea,37.5666791,126.9782914
+ap-southeast-2,Oceania (Sydney),Sydney Australia,-33.8698439,151.2082848
+sa-east-1,South America (Sao Paulo),Sao Paulo Brazil,-23.5506507,-46.6333824

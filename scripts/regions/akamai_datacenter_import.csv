@@ -1,0 +1,32 @@
+region_code,city_label,region_name,status,latitude,longitude
+us-southeast,Atlanta,"Atlanta, GA",Full availability,33.7544657,-84.3898151
+us-ord,Chicago,"Chicago, IL",Full availability,41.8755616,-87.6244212
+us-central,Dallas,"Dallas, TX",Full availability,32.7762719,-96.7968559
+us-west,Fremont,"Fremont, CA",Full availability,37.5482697,-121.9885710
+us-lax,Los Angeles,"Los Angeles, CA",Full availability,34.0536909,-118.2427660
+us-mia,Miami,"Miami, FL",Full availability,25.7741566,-80.1935973
+us-east,Newark,"Newark, NJ",Full availability,40.7356570,-74.1723667
+us-sea,Seattle,"Seattle, WA",Full availability,47.6038321,-122.3300620
+us-iad,"Washington DC","Washington, D.C.",Limited availability,38.8950982,-77.0363849
+ca-central,Toronto,"Toronto, Canada",Full availability,43.6534817,-79.3839347
+se-sto,Stockholm,"Stockholm, SE",Full availability,59.3251172,18.0710935
+nl-ams,Amsterdam,"Amsterdam, NL",Full availability,52.3730796,4.8924534
+it-mil,Milan,"Milan, IT",Full availability,45.4641943,9.1896346
+eu-west,London,"London, UK",Limited availability,51.5074456,-0.1277653
+gb-lon,London,"London, UK Expansion",Full availability,51.5074456,-0.1277653
+fr-par,Paris,"Paris, FR",Full availability,48.8588897,2.3200410
+es-mad,Madrid,"Madrid, ES",Limited availability,40.4167820,-3.7035070
+eu-central,Frankfurt,"Frankfurt, DE",Full availability,50.1106444,8.6820917
+de-fra-2,Frankfurt,"Frankfurt, DE Expansion",Full availability,50.1106444,8.6820917
+ap-south,Singapore,"Singapore, SP",Full availability,1.3571070,103.8194992
+sg-sin-2,Singapore,"Singapore Expansion, SP",Full availability,1.3571070,103.8194992
+jp-osa,Osaka,"Osaka, JP",Full availability,34.6937569,135.5014539
+ap-northeast,Tokyo,"Tokyo, JP",Full availability,35.6768601,139.7638947
+jp-tyo-3,Tokyo,"Tokyo Expansion, JP",Full availability,35.6768601,139.7638947
+in-maa,Chennai,"Chennai, IN",Full availability,13.0836939,80.2701860
+ap-west,Mumbai,"Mumbai, IN",Full availability,19.0549990,72.8692035
+in-bom-2,Mumbai,"Mumbai Expansion, IN",Full availability,19.0549990,72.8692035
+id-cgk,Jakarta,"Jakarta, ID",Full availability,-6.1754049,106.8271680
+br-gru,"Sao Paulo","Sao Paulo, BR",Full availability,-23.5506507,-46.6333824
+au-mel,Melbourne,"Melbourne, AU",Limited availability,-37.8142454,144.9631732
+ap-southeast,Sydney,"Sydney, AU",Full availability,-33.8698439,151.2082848

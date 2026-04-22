@@ -1,0 +1,18 @@
+region_code,region_name,city_label,latitude,longitude
+cn-qingdao,China (Qingdao),"Qingdao, China",36.0663249,120.3777659
+cn-beijing,China (Beijing),"Beijing, China",39.9057136,116.3912972
+cn-zhangjiakou,China (Zhangjiakou),"Zhangjiakou, Hebei, China",40.8171433,114.8782861
+cn-huhehaote,China (Hohhot),"Hohhot, Inner Mongolia, China",40.8184528,111.6601939
+cn-hangzhou,China (Hangzhou),"Hangzhou, Zhejiang, China",30.2489634,120.2052342
+cn-shanghai,China (Shanghai),"Shanghai, China",31.2312707,121.4700152
+cn-shenzhen,China (Shenzhen),"Shenzhen, Guangdong, China",22.5445741,114.0545429
+cn-hongkong,China (Hong Kong),Hong Kong,22.3492155,114.1857978
+ap-northeast-1,Japan (Tokyo),"Tokyo, Japan",35.6768601,139.7638947
+ap-southeast-1,Singapore (Singapore),Singapore,1.3571070,103.8194992
+ap-southeast-3,Malaysia (Kuala Lumpur),"Kuala Lumpur, Malaysia",3.1516964,101.6942371
+ap-southeast-5,Indonesia (Jakarta),"Jakarta, Indonesia",-6.1754049,106.8271680
+ap-south-1,India (Mumbai),"Mumbai, India",19.0549990,72.8692035
+us-east-1,US (Virginia),"Ashburn, Virginia, United States",39.0437192,-77.4874899
+us-west-1,US (Silicon Valley),"Santa Clara, California, United States",37.3541132,-121.9551740
+me-east-1,UAE (Dubai),"Dubai, United Arab Emirates",25.0742823,55.1885387
+eu-central-1,Germany (Frankfurt),"Frankfurt, Germany",50.1106444,8.6820917

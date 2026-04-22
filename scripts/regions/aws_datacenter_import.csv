@@ -1,0 +1,35 @@
+region_code,region_name,city_label,latitude,longitude
+us-east-1,US East (N. Virginia),Ashburn Virginia USA,39.0437192,-77.4874899
+us-east-2,US East (Ohio),Columbus Ohio USA,39.9622601,-83.0007065
+us-west-1,US West (N. California),San Jose California USA,37.3361663,-121.8905910
+us-west-2,US West (Oregon),Boardman Oregon USA,45.8398550,-119.7005830
+af-south-1,Africa (Cape Town),Cape Town South Africa,-33.9288301,18.4172197
+ap-east-1,Asia Pacific (Hong Kong),Hong Kong,22.2792968,114.1628907
+ap-south-2,Asia Pacific (Hyderabad),Hyderabad India,17.3605890,78.4740613
+ap-southeast-3,Asia Pacific (Jakarta),Jakarta Indonesia,-6.1754049,106.8271680
+ap-southeast-5,Asia Pacific (Malaysia),Kuala Lumpur Malaysia,3.1516964,101.6942371
+ap-southeast-4,Asia Pacific (Melbourne),Melbourne Australia,-37.8142454,144.9631732
+ap-south-1,Asia Pacific (Mumbai),Mumbai India,19.0549990,72.8692035
+ap-southeast-6,Asia Pacific (New Zealand),Auckland New Zealand,-36.8520950,174.7631803
+ap-northeast-3,Asia Pacific (Osaka),Osaka Japan,34.6937569,135.5014539
+ap-northeast-2,Asia Pacific (Seoul),Seoul South Korea,37.5666791,126.9782914
+ap-southeast-1,Asia Pacific (Singapore),Singapore,1.3571070,103.8194992
+ap-southeast-2,Asia Pacific (Sydney),Sydney Australia,-33.8698439,151.2082848
+ap-east-2,Asia Pacific (Taipei),Taipei Taiwan,25.0375198,121.5636796
+ap-southeast-7,Asia Pacific (Thailand),Bangkok Thailand,13.7524938,100.4935089
+ap-northeast-1,Asia Pacific (Tokyo),Tokyo Japan,35.6768601,139.7638947
+ca-central-1,Canada (Central),Montreal Quebec Canada,45.5031824,-73.5698065
+ca-west-1,Canada West (Calgary),Calgary Alberta Canada,51.0456064,-114.0575410
+eu-central-1,Europe (Frankfurt),Frankfurt Germany,50.1106444,8.6820917
+eu-west-1,Europe (Ireland),Dublin Ireland,53.3493795,-6.2605593
+eu-west-2,Europe (London),London United Kingdom,51.5074456,-0.1277653
+eu-south-1,Europe (Milan),Milan Italy,45.4641943,9.1896346
+eu-west-3,Europe (Paris),Paris France,48.8588897,2.3200410
+eu-south-2,Europe (Spain),Zaragoza Aragon Spain,41.6915847,-0.9101268
+eu-north-1,Europe (Stockholm),Stockholm Sweden,59.3251172,18.0710935
+eu-central-2,Europe (Zurich),Zurich Switzerland,47.3744489,8.5410422
+il-central-1,Israel (Tel Aviv),Tel Aviv Israel,32.0852997,34.7818064
+mx-central-1,Mexico (Central),Queretaro Mexico,20.8052225,-99.8837376
+me-south-1,Middle East (Bahrain),Manama Bahrain,26.2235041,50.5822436
+me-central-1,Middle East (UAE),Abu Dhabi United Arab Emirates,24.4538352,54.3774014
+sa-east-1,South America (Sao Paulo),Sao Paulo Brazil,-23.5506507,-46.6333824

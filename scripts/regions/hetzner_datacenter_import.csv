@@ -1,0 +1,7 @@
+region_code,region_name,city_label,latitude,longitude
+eu-central-fsn1,DE Falkenstein,"Falkenstein, Saxony, Germany",50.477884,12.3712891
+eu-central-nbg1,DE Nuremberg,"Nuremberg, Bavaria, Germany",49.453872,11.077298
+eu-central-hel1,FI Helsinki,"Helsinki, Finland",60.1674881,24.9427473
+us-east-ash,"US Ashburn, VA","Ashburn, Virginia, United States",39.0437191,-77.4874899
+us-west-hil,"US Hillsboro, OR","Hillsboro, Oregon, United States",45.5228939,-122.989827
+ap-southeast-sin,SG Singapore,Singapore,1.357107,103.8194992

@@ -1,0 +1,18 @@
+region_code,region_name,type,az_ids,city_label,latitude,longitude
+eu-west-par,Europe (France - Paris),3-AZ,eu-west-par-a|eu-west-par-b|eu-west-par-c,PAR,48.8534951,2.3483915
+eu-west-gra,Europe (France - Gravelines),1-AZ,eu-west-gra-a,GRA,50.9870697,2.1273118
+eu-west-rbx,Europe (France - Roubaix),1-AZ,eu-west-rbx-a,RBX,50.6915893,3.1741734
+eu-west-sbg,Europe (France - Strasbourg),1-AZ,eu-west-sbg-a,SBG,48.5846140,7.7507127
+eu-west-lim,Europe (Germany - Limburg),1-AZ,eu-west-lim-a,LIM,50.3880447,8.0635310
+eu-central-waw,Europe (Poland - Warsaw),1-AZ,eu-central-waw-a,WAW,52.2333742,21.0711489
+eu-west-eri,Europe (United Kingdom - Erith),1-AZ,eu-west-eri-a,ERI,51.4808190,0.1792322
+us-east-vin,North America (US - East - Vint Hill),1-AZ,us-east-vin-a,VIN,38.7460432,-77.6746541
+us-west-hil,North America (US - West - Hillsboro),1-AZ,us-west-hil-a,HIL,45.5228939,-122.9898270
+ca-east-bhs,North America (Canada - East - Beauharnois),1-AZ,ca-east-bhs-a,BHS,45.3139778,-73.8758340
+ca-east-tor,North America (Canada - East - Toronto),1-AZ,ca-east-tor-a,YYZ,43.6534817,-79.3839347
+ap-southeast-sgp,Asia Pacific (Singapore - Singapore),1-AZ,ap-southeast-sgp-a,SGP,1.3571070,103.8194992
+ap-southeast-syd,Asia Pacific (Australia - Sydney),1-AZ,ap-southeast-syd-a,SYD,-33.8698439,151.2082848
+ap-south-mum,Asia Pacific (India - Mumbai),1-AZ,ap-south-mum-a,YNM,19.0549990,72.8692035
+eu-west-rbx-snc,Europe (France - Roubaix) (SNC),1-AZ,eu-west-rbx-snc-a,RBX-SNC,50.6915893,3.1741734
+eu-west-sbg-snc,Europe (France - Strasbourg) (SNC),1-AZ,eu-west-sbg-snc-a,SBG-SNC,48.5846140,7.7507127
+eu-west-gra-snc,Europe (France - Gravelines) (SNC),1-AZ,eu-west-gra-snc-a,GRA-SNC,50.9870697,2.1273118
