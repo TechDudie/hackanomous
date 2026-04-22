@@ -5,7 +5,7 @@
     import { ScrollSmoother } from "gsap/ScrollSmoother";
     import { ScrollToPlugin } from "gsap/ScrollToPlugin";
     import { ScrollTrigger } from "gsap/ScrollTrigger";
-    import { Mouse } from "lucide-svelte";
+    import { Mouse, ChevronDown } from "lucide-svelte";
     import p5 from "p5";
 
     import hackclub from "./assets/hackclub.svg";
@@ -21,7 +21,11 @@
     /** @type {HTMLElement | undefined} */
     let horizontalSection;
     /** @type {gsap.core.Tween | undefined} */
-    let horizontalScrollTween;
+    let horizontalScrollTween = $state(undefined);
+    /** @type {HTMLElement | undefined} */
+    let stepsSection;
+    /** @type {HTMLDivElement | undefined} */
+    let stepsVisual;
     /** @type {ScrollSmoother} */
     let smoothie;
 
@@ -229,14 +233,66 @@
             };
         });
 
+        const steps = gsap.utils.toArray(".step-item");
+        const stepTweens = steps.map((step) =>
+            gsap.to(step, {
+                opacity: 1,
+                duration: 0.3,
+                ease: "power1.inOut",
+                scrollTrigger: {
+                    trigger: step,
+                    start: "top center+=15%",
+                    end: "bottom center-=12%",
+                    toggleActions: "play reverse play reverse",
+                },
+            }),
+        );
+
+        const stepProgressTween = gsap.to("#step-progress", {
+            scaleY: 1,
+            ease: "none",
+            scrollTrigger: {
+                trigger: "#steps-section",
+                start: "top top+=30%",
+                end: "bottom bottom-=30%",
+                scrub: 0.5,
+            },
+        });
+
+        const stepsVisualPinTrigger =
+            stepsSection &&
+            stepsVisual &&
+            ScrollTrigger.create({
+                trigger: stepsSection,
+                start: "top top",
+                end: "bottom bottom",
+                pin: stepsVisual,
+                pinSpacing: false,
+                anticipatePin: 1,
+                invalidateOnRefresh: true,
+            });
+
         return () => {
+            // disable p5
             renderer.remove();
 
-            smoothie.kill();
-
+            // disable GSAP tweens first
             horizontalScrollTween?.scrollTrigger?.kill();
             horizontalScrollTween?.kill();
             horizontalScrollTween = undefined;
+
+            stepTweens.forEach((tween) => {
+                tween.scrollTrigger?.kill();
+                tween.kill();
+            });
+
+            stepProgressTween.scrollTrigger?.kill();
+            stepProgressTween.kill();
+
+            stepsVisualPinTrigger?.kill();
+
+            // disable GSAP ScrollSmoother
+            smoothie.kill();
         };
     });
 </script>
@@ -268,7 +324,7 @@
         </section>
 
         <!-- landing -->
-        <section class="min-h-[100dvh] flex justify-center items-center py-12 px-4">
+        <section class="relative min-h-[100dvh] flex justify-center items-center py-12 px-4">
             <div class="relative">
                 <img src={mascotDark} class="base absolute top-3 -right-6" width="160" alt="anomaly, our mascot!" />
                 <div class="w-fit border-2 border-dashed border-(--code-bg) rounded-2xl px-16 py-2 relative z-10 bg-[linear-gradient(175deg,var(--bg)_0%,#0B1618_33%,#080E12_100%)]">
@@ -291,14 +347,14 @@
                     ages 13-18 only. <span class="underline underline-offset-2">Jun 1</span> to <span class="underline underline-offset-2">Sept 1</span>.
                 </h6>
             </div>
-        </section>
-
-        <!-- scroll down -->
-        <section class="absolute top-[calc(100dvh-2rem)] left-1/2 -translate-x-1/2 -translate-y-full text-(--accent-border)">
-            <div class="flex flex-row items-center gap-3 floater">
-                <Mouse size={24} />
-                <span class="font-content font-light text-base tracking-widest">SCROLL DOWN</span>
-            </div>
+            
+            <!-- scroll down -->
+            <section class="absolute bottom-8 left-1/2 -translate-x-1/2 text-(--accent-border)">
+                <div class="flex flex-row items-center gap-3 floater">
+                    <Mouse size={24} />
+                    <span class="font-content font-light text-base tracking-widest">SCROLL DOWN</span>
+                </div>
+            </section>
         </section>
 
         <!-- timeline -->
@@ -322,7 +378,7 @@
                     </div>
 
                     <!-- right content -->
-                    <div class="absolute top-1/2 left-[165dvw] -translate-y-[calc(50%+10px)] w-[85dvw] sm:w-[70dvw] md:w-[60dvw] lg:w-[45vw] pr-12 lg:pr-24 z-10 flex flex-col items-end text-right">
+                    <div class="absolute top-1/2 left-[165dvw] -translate-y-[calc(50%+28px)] w-[85dvw] sm:w-[70dvw] md:w-[60dvw] lg:w-[45vw] pr-12 lg:pr-24 z-10 flex flex-col items-end text-right">
                         <h2 class="font-mono font-medium text-4xl md:text-6xl text-(--text) leading-tight">
                             <span class="italic">DE</span>SLOP THE <br />
                             <span class="font-mono font-bold inline-block bg-clip-text text-transparent bg-[linear-gradient(90deg,var(--accent)_0%,color-mix(in_srgb,var(--accent)_80%,transparent)_100%)]"> WORLD. </span>
@@ -357,6 +413,75 @@
 
             <!-- bottom border strip glow -->
             <div class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-(--accent) to-transparent opacity-67"></div>
+        </section>
+
+        <section class="relative min-h-[100dvh] flex justify-center items-center">
+            <h1 class="font-mono">TODO: more content coming soon!<br>keep scrolling for now...</h1>
+
+            <!-- wait, so what do we do? -->
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 floater flex flex-col items-center">
+                <span class="font-content font-light text-base tracking-widest">...wait, so what do we do?</span>
+                <ChevronDown size={24}/>
+            </div>
+        </section>
+
+        <!-- TODO: vertical step by step scroll -->
+        <section bind:this={stepsSection} class="min-h-[100dvh] flex flex-col items-center relative overflow-hidden bg-black/80 w-full" id="steps-section">
+            <div class="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-(--accent) to-transparent opacity-67 z-10"></div>
+
+            <div class="w-full max-w-7xl mx-auto flex flex-row relative py-32 px-6 lg:px-24">
+                
+                <!-- left content scrolling -->
+                <div class="w-1/2 flex flex-col relative pr-20">
+                    
+                    <!-- steps progress bar -->
+                    <div class="absolute top-0 bottom-0 left-0 w-[4px] bg-(--code-bg) rounded-full">
+                        <div id="step-progress" class="w-full bg-(--accent) h-full origin-top scale-y-0 relative z-20"></div>
+                    </div>
+
+                    <!-- TODO: figure out if we need to add 01 02 03 04 to each step? -->
+
+                    <!-- steps -->
+                    <div class="step-item min-h-[50dvh] flex flex-col justify-center pl-12 opacity-30 transition-opacity duration-700 ease-out">
+                        <h2 class="font-mono font-bold text-4xl text-(--accent) mb-4">INSPIRE TO CREATE</h2>
+                        <p class="font-content font-light text-base text-(--text) leading-relaxed tracking-wide">
+                            Brainstorm an innovative and interesting idea! Explore practical scenarios in which AI could actually make a productive difference.
+                        </p>
+                    </div>
+
+                    <div class="step-item min-h-[50dvh] flex flex-col justify-center pl-12 opacity-30 transition-opacity duration-700 ease-out">
+                        <h2 class="font-mono font-bold text-4xl text-(--accent) mb-4">BUILD YOUR PROJECT</h2>
+                        <p class="font-content font-light text-base text-(--text) leading-relaxed tracking-wide">
+                            Bring your idea to life through code and hardware! If you're making a hardware project and can't cover parts, we've got your back with a funding grant.
+                        </p>
+                    </div>
+
+                    <div class="step-item min-h-[50dvh] flex flex-col justify-center pl-12 opacity-30 transition-opacity duration-700 ease-out">
+                        <h2 class="font-mono font-bold text-4xl text-(--accent) mb-4">SHIP TO THE WHOLE<br>UNIVERSE</h2>
+                        <p class="font-content font-light text-base text-(--text) leading-relaxed tracking-wide">
+                            Show off your finished project! Also, check out what other amazing projects by other teenage inventors (like yourself!) have been building and shipping.
+                        </p>
+                    </div>
+
+                    <div class="step-item min-h-[50dvh] flex flex-col justify-center pl-12 opacity-30 transition-opacity duration-700 ease-out">
+                        <h2 class="font-mono font-bold text-4xl text-(--accent) mb-4">CLAIM YOUR EPIC REWARDS</h2>
+                        <p class="font-content font-light text-base text-(--text) leading-relaxed tracking-wide">
+                            You did it! In exchange for helping take AI to the next level, receive Bolts to get DDR5 RAM, AI credits, or perhaps an RTX 5090!
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- right side -->
+                <div class="w-1/2 relative h-full">
+                    <div bind:this={stepsVisual} class="w-full aspect-square border-2 border-(--accent) flex items-center justify-center bg-white/1">
+                        <span class="font-mono text-(--text-h)">TODO: visuals content here</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-(--accent) to-transparent opacity-67 z-10"></div>
         </section>
 
         <!-- standard FAQ and closing info -->
