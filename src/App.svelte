@@ -443,28 +443,40 @@
 
                     <!-- steps -->
                     <div class="step-item min-h-[50dvh] flex flex-col justify-center pl-12 opacity-30 transition-opacity duration-700 ease-out">
-                        <h2 class="font-mono font-bold text-4xl text-(--accent) mb-4">INSPIRE TO CREATE</h2>
+                        <div class="absolute">
+                            <h1 class="relative font-mono font-medium text-7xl left-[-151px] top-[37px]">1</h1>
+                        </div>
+                        <h2 class="font-mono font-bold text-4xl text-(--accent) mb-4 tracking-wide">INSPIRE TO CREATE</h2>
                         <p class="font-content font-light text-base text-(--text) leading-relaxed tracking-wide">
                             Brainstorm an innovative and interesting idea! Explore practical scenarios in which AI could actually make a productive difference.
                         </p>
                     </div>
 
                     <div class="step-item min-h-[50dvh] flex flex-col justify-center pl-12 opacity-30 transition-opacity duration-700 ease-out">
-                        <h2 class="font-mono font-bold text-4xl text-(--accent) mb-4">BUILD YOUR PROJECT</h2>
+                        <div class="absolute">
+                            <h1 class="relative font-mono font-medium text-7xl left-[-151px] top-[37px]">2</h1>
+                        </div>
+                        <h2 class="font-mono font-bold text-4xl text-(--accent) mb-4 tracking-wide">BUILD YOUR PROJECT</h2>
                         <p class="font-content font-light text-base text-(--text) leading-relaxed tracking-wide">
                             Bring your idea to life through code and hardware! If you're making a hardware project and can't cover parts, we've got your back with a funding grant.
                         </p>
                     </div>
 
                     <div class="step-item min-h-[50dvh] flex flex-col justify-center pl-12 opacity-30 transition-opacity duration-700 ease-out">
-                        <h2 class="font-mono font-bold text-4xl text-(--accent) mb-4">SHIP TO THE WHOLE<br>UNIVERSE</h2>
+                        <div class="absolute">
+                            <h1 class="relative font-mono font-medium text-7xl left-[-151px] top-[59px]">3</h1>
+                        </div>
+                        <h2 class="font-mono font-bold text-4xl text-(--accent) mb-4 tracking-wide">SHIP TO THE WHOLE<br>UNIVERSE</h2>
                         <p class="font-content font-light text-base text-(--text) leading-relaxed tracking-wide">
                             Show off your finished project! Also, check out what other amazing projects by other teenage inventors (like yourself!) have been building and shipping.
                         </p>
                     </div>
 
                     <div class="step-item min-h-[50dvh] flex flex-col justify-center pl-12 opacity-30 transition-opacity duration-700 ease-out">
-                        <h2 class="font-mono font-bold text-4xl text-(--accent) mb-4">CLAIM YOUR EPIC REWARDS</h2>
+                        <div class="absolute">
+                            <h1 class="relative font-mono font-medium text-7xl left-[-151px] top-[59px]">4</h1>
+                        </div>
+                        <h2 class="font-mono font-bold text-4xl text-(--accent) mb-4 tracking-wide">CLAIM YOUR EPIC REWARDS</h2>
                         <p class="font-content font-light text-base text-(--text) leading-relaxed tracking-wide">
                             You did it! In exchange for helping take AI to the next level, receive Bolts to get DDR5 RAM, AI credits, or perhaps an RTX 5090!
                         </p>
