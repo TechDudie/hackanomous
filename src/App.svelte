@@ -334,19 +334,19 @@
                         </p>
 
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-10 w-full max-w-3xl">
-                            <div class="border border-(--code-bg) p-6 rounded-2xl bg-black/40 backdrop-blur-sm hover:border-(--accent) hover:-translate-y-2 hover:shadow-[0_15px_40px_-10px_color-mix(in_srgb,var(--accent)_25%,transparent)] transition-all duration-500 ease-out group cursor-default">
-                                <h4 class="font-heading text-3xl text-(--accent) mb-2 group-hover:-translate-x-2 group-hover:drop-shadow-[0_0_16px_color-mix(in_srgb,var(--accent)_40%,transparent)] transition-all duration-500 text-right">software</h4>
+                            <div class="border border-(--code-bg) p-6 rounded-2xl bg-black/40 backdrop-blur-sm hover:border-(--accent) hover:-translate-y-2 hover:shadow-[0_0_67px_color-mix(in_srgb,var(--accent-hover)_6.7%,transparent)] transition-all duration-500 ease-out group cursor-default">
+                                <h4 class="font-heading text-3xl text-(--accent) mb-2 group-hover:drop-shadow-[0_0_16px_color-mix(in_srgb,var(--accent)_20%,transparent)] transition-all duration-500 text-right">software</h4>
                                 <!-- TODO: elaborate? -->
                                 <p class="font-content text-sm font-light text-(--text-h) group-hover:text-(--text) transition-colors duration-500">Build software that implements AI or ML to earn Bolts! Use them to buy Raspberry Pis, API credits, RAM & GPU grants, and more!</p>
                             </div>
-                            <div class="border border-(--code-bg) p-6 rounded-2xl bg-black/40 backdrop-blur-sm hover:border-(--accent) hover:-translate-y-2 hover:shadow-[0_15px_40px_-10px_color-mix(in_srgb,var(--accent)_25%,transparent)] transition-all duration-500 ease-out group cursor-default">
-                                <h4 class="font-heading text-3xl text-(--accent) mb-2 group-hover:-translate-x-2 group-hover:drop-shadow-[0_0_16px_color-mix(in_srgb,var(--accent)_40%,transparent)] transition-all duration-500 text-right">hardware</h4>
+                            <div class="border border-(--code-bg) p-6 rounded-2xl bg-black/40 backdrop-blur-sm hover:border-(--accent) hover:-translate-y-2 hover:shadow-[0_0_67px_color-mix(in_srgb,var(--accent-hover)_6.7%,transparent)] transition-all duration-500 ease-out group cursor-default">
+                                <h4 class="font-heading text-3xl text-(--accent) mb-2 group-hover:drop-shadow-[0_0_16px_color-mix(in_srgb,var(--accent)_20%,transparent)] transition-all duration-500 text-right">hardware</h4>
                                 <!-- TODO: elaborate? -->
                                 <p class="font-content text-sm font-light text-(--text-h) group-hover:text-(--text) transition-colors duration-500">Design hardware that implements AI or ML and receive funding to build it! Earn bolts for your physical work!</p>
                             </div>
                         </div>
 
-                        <div class="flex gap-6">
+                        <div class="flex gap-5">
                             <div class="mt-12">
                                 <button onclick={() => gsap.to(window, { duration: .3, scrollTo: { y: '#faq', autoKill: true }, ease: 'power2.inOut' })} class="font-mono font-semibold border-2 border-solid border-(--accent) text-(--accent) hover:bg-(--accent) hover:text-(--bg) rounded-xl px-12 py-4 cursor-pointer focus:outline-none hover:-translate-y-1 hover:shadow-[0_0_30px_color-mix(in_srgb,var(--accent)_30%,transparent)] transition-all duration-300 tracking-wide text-lg"> LEARN MORE </button>
                             </div>
