@@ -319,31 +319,35 @@
         </section>
 
         <!-- hackanomous presents -->
-        <section class="absolute top-[50dvh] left-1/2 translate-x-[-23rem] translate-y-[-11rem] -rotate-[15deg] z-1 underline underline-offset-2 decoration-(--accent-border) z-20">
+        <!-- <section class="absolute top-[50dvh] left-1/2 translate-x-[-23rem] translate-y-[-11rem] -rotate-[15deg] z-1 underline underline-offset-2 decoration-(--accent-border) z-20">
             <h6 class="font-content text-(--accent-border) tracking-wider">hackanomous presents</h6>
-        </section>
+        </section> -->
 
         <!-- landing -->
         <section class="relative min-h-[100dvh] flex justify-center items-center py-12 px-4">
             <div class="relative">
-                <img src={mascotDark} class="base absolute top-3 -right-6" width="160" alt="anomaly, our mascot!" />
-                <div class="w-fit border-2 border-dashed border-(--code-bg) rounded-2xl px-16 py-2 relative z-10 bg-[linear-gradient(175deg,var(--bg)_0%,#0B1618_33%,#080E12_100%)]">
+                <div class="w-fit border-2 border-dashed border-(--code-bg) rounded-2xl px-16 py-2 relative z-10 -ml-24 -rotate-5 bg-[linear-gradient(175deg,var(--bg)_0%,#0B1618_33%,#080E12_100%)]">
                     <h3 class="font-mono font-extralight text-sm text-(--text-h) tracking-widest">COMING SOON</h3>
                 </div>
-                <h1 class="font-heading font-regular text-7xl text-(--accent) mt-6">
-                    BUILD <span class="font-semibold">AI</span>.
-                </h1>
-                <h1 class="font-heading font-regular text-7xl text-(--text) mt-4">
-                    GET <span class="font-semibold">PRIZES</span>!
-                </h1>
-                <div class="mt-8 flex relative z-10">
+                <div class="flex">
+                    <div class="text-right">
+                        <h1 class="font-heading font-regular text-7xl text-(--accent) mt-4">
+                            hackanomous
+                        </h1>
+                        <h1 class="font-heading font-regular text-4xl text-(--text) mt-4">
+                            BUILD <span class="font-semibold underline">AI</span>. GET <span class="font-semibold underline">PRIZES</span>!
+                        </h1>
+                    </div>
+                    <img src={mascotDark} class="base -mt-4.5 ml-2" width="216" alt="anomaly, our mascot!" />
+                </div>
+                <div class="flex relative z-10 pl-36 pr-50">
                     <div class="relative flex-1 mr-4">
                         <input id="rsvp-input" class="peer w-full px-4 font-mono font-light border-2 border-solid border-(--accent) text-(--text-h) rounded-xl py-3 focus:outline-none focus:border-(--accent-hover) focus:shadow-[0_0_67px_color-mix(in_srgb,var(--accent-hover)_6.7%,transparent)] bg-transparent placeholder:text-(--accent-border) placeholder-opacity-100" style="transition: box-shadow 0.35s ease-out, border-color 0.15s ease-out, background-color 0.15s ease-out;" type="text" placeholder="you@example.com" />
                         <label for="rsvp-input" class="absolute left-3 -top-2.5 px-1 font-mono text-xs font-semibold text-(--accent-hover) bg-[#0a1215] opacity-0 translate-y-2 pointer-events-none transition-all duration-300 peer-focus:opacity-100 peer-focus:translate-y-0 rounded-sm border-2">email</label>
                     </div>
                     <button onclick={() => window.open("https://hackanomous-rsvp.fillout.com/t/4oPTMjqFuaus", "_blank")} class="font-mono font-semibold border-2 border-solid border-(--accent) bg-(--accent) text-(--bg) rounded-xl px-10 py-3 cursor-pointer hover:bg-transparent hover:text-(--accent) hover:shadow-[0_0_67px_color-mix(in_srgb,var(--accent-hover)_6.7%,transparent)]" style="transition: box-shadow 0.35s ease-out, border-color 0.15s ease-out, background-color 0.15s ease-out, color 0.15s ease-out;">RSVP!</button>
                 </div>
-                <h6 class="font-mono font-light text-xs text-center text-(--text-h) tracking-widest mt-6">
+                <h6 class="font-mono font-light text-xs text-center text-(--text-h) tracking-widest mt-4">
                     ages 13-18 only. <span class="underline underline-offset-2">Jun 1</span> to <span class="underline underline-offset-2">Sept 1</span>.
                 </h6>
             </div>
