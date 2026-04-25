@@ -1,4 +1,4 @@
-# Hackanomous
+# Hackanomous - Main Website
 
 monorepo for hc's next YSWS: Hackanomous!
 
