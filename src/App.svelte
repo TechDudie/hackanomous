@@ -234,7 +234,7 @@
         });
 
         const steps = gsap.utils.toArray(".step-item");
-        const stepTweens = steps.map((step) =>
+        const stepTweens = steps.map((step, index) =>
             gsap.to(step, {
                 opacity: 1,
                 duration: 0.3,
@@ -244,19 +244,20 @@
                     start: "top center+=15%",
                     end: "bottom center-=12%",
                     toggleActions: "play reverse play reverse",
+                    onEnter: () => gsap.to("#step-progress", { yPercent: index * 100, duration: 0.2, ease: "power2.out" }),
+                    onEnterBack: () => gsap.to("#step-progress", { yPercent: index * 100, duration: 0.2, ease: "power2.out" }),
                 },
             }),
         );
 
-        const stepProgressTween = gsap.to("#step-progress", {
-            scaleY: 1,
-            ease: "none",
-            scrollTrigger: {
-                trigger: "#steps-section",
-                start: "top top+=30%",
-                end: "bottom bottom-=30%",
-                scrub: 0.5,
-            },
+        const stepProgressPin = ScrollTrigger.create({
+            trigger: "#steps-progress-wrapper",
+            start: "top 12.5%",
+            endTrigger: ".w-1\\/2.flex.flex-col",
+            end: "bottom 75%",
+            pin: true,
+            pinSpacing: false,
+            invalidateOnRefresh: true,
         });
 
         const stepsVisualPinTrigger =
@@ -286,8 +287,7 @@
                 tween.kill();
             });
 
-            stepProgressTween.scrollTrigger?.kill();
-            stepProgressTween.kill();
+            stepProgressPin?.kill();
 
             stepsVisualPinTrigger?.kill();
 
@@ -439,48 +439,50 @@
                 <div class="w-1/2 flex flex-col relative pr-20">
                     
                     <!-- steps progress bar -->
-                    <div class="absolute top-0 bottom-0 left-0 w-[4px] bg-(--code-bg) rounded-full">
-                        <div id="step-progress" class="w-full bg-(--accent) h-full origin-top scale-y-0 relative z-20"></div>
+                    <div class="absolute inset-y-0 left-0 w-[4px] z-20">
+                        <div id="steps-progress-wrapper" class="w-full h-[50vh] min-h-[50dvh] bg-(--code-bg)">
+                            <div id="step-progress" class="w-full h-1/4 bg-(--accent) shadow-[0_0_50px_color-mix(in_srgb,var(--accent)_50%,transparent)]" style="transform: translateY(0%);"></div>
+                        </div>
                     </div>
 
                     <!-- TODO: figure out if we need to add 01 02 03 04 to each step? -->
 
                     <!-- steps -->
-                    <div class="step-item min-h-[50dvh] flex flex-col justify-center pl-12 opacity-30 transition-opacity duration-700 ease-out">
+                    <div class="step-item min-h-[60vh] flex flex-col justify-center pl-12 opacity-30 transition-opacity duration-700 ease-out">
                         <div class="absolute">
                             <h1 class="relative font-mono font-medium text-7xl left-[-151px] top-[37px]">1</h1>
                         </div>
-                        <h2 class="font-mono font-bold text-4xl text-(--accent) mb-4 tracking-wide">INSPIRE TO CREATE</h2>
+                        <h2 class="font-mono font-bold text-4xl text-(--accent-hover) mb-4 tracking-wide">INSPIRE TO CREATE</h2>
                         <p class="font-content font-light text-base text-(--text) leading-relaxed tracking-wide">
                             Brainstorm an innovative and interesting idea! Explore practical scenarios in which AI could actually make a productive difference.
                         </p>
                     </div>
 
-                    <div class="step-item min-h-[50dvh] flex flex-col justify-center pl-12 opacity-30 transition-opacity duration-700 ease-out">
+                    <div class="step-item min-h-[60dvh] flex flex-col justify-center pl-12 opacity-30 transition-opacity duration-700 ease-out">
                         <div class="absolute">
                             <h1 class="relative font-mono font-medium text-7xl left-[-151px] top-[37px]">2</h1>
                         </div>
-                        <h2 class="font-mono font-bold text-4xl text-(--accent) mb-4 tracking-wide">BUILD YOUR PROJECT</h2>
+                        <h2 class="font-mono font-bold text-4xl text-(--accent-hover) mb-4 tracking-wide">BUILD YOUR PROJECT</h2>
                         <p class="font-content font-light text-base text-(--text) leading-relaxed tracking-wide">
                             Bring your idea to life through code and hardware! If you're making a hardware project and can't cover parts, we've got your back with a funding grant.
                         </p>
                     </div>
 
-                    <div class="step-item min-h-[50dvh] flex flex-col justify-center pl-12 opacity-30 transition-opacity duration-700 ease-out">
+                    <div class="step-item min-h-[60dvh] flex flex-col justify-center pl-12 opacity-30 transition-opacity duration-700 ease-out">
                         <div class="absolute">
                             <h1 class="relative font-mono font-medium text-7xl left-[-151px] top-[59px]">3</h1>
                         </div>
-                        <h2 class="font-mono font-bold text-4xl text-(--accent) mb-4 tracking-wide">SHIP TO THE WHOLE<br>UNIVERSE</h2>
+                        <h2 class="font-mono font-bold text-4xl text-(--accent-hover) mb-4 tracking-wide">SHIP TO THE WHOLE<br>UNIVERSE</h2>
                         <p class="font-content font-light text-base text-(--text) leading-relaxed tracking-wide">
                             Show off your finished project! Also, check out what other amazing projects by other teenage inventors (like yourself!) have been building and shipping.
                         </p>
                     </div>
 
-                    <div class="step-item min-h-[50dvh] flex flex-col justify-center pl-12 opacity-30 transition-opacity duration-700 ease-out">
+                    <div class="step-item min-h-[60dvh] flex flex-col justify-center pl-12 opacity-30 transition-opacity duration-700 ease-out">
                         <div class="absolute">
                             <h1 class="relative font-mono font-medium text-7xl left-[-151px] top-[59px]">4</h1>
                         </div>
-                        <h2 class="font-mono font-bold text-4xl text-(--accent) mb-4 tracking-wide">CLAIM YOUR EPIC REWARDS</h2>
+                        <h2 class="font-mono font-bold text-4xl text-(--accent-hover) mb-4 tracking-wide">CLAIM YOUR EPIC REWARDS</h2>
                         <p class="font-content font-light text-base text-(--text) leading-relaxed tracking-wide">
                             You did it! In exchange for helping take AI to the next level, receive Bolts to get DDR5 RAM, AI credits, or perhaps an RTX 5090!
                         </p>
